@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(236, 236, 236);
+}
+.user_management_main{
+    padding-left: 50px;
+    width: 70%;
+}
+
+.user_management_content{
+    display: flex;
+    flex-wrap: wrap;
+}
+table{
+    width: 1000px;
+    border-spacing: 0;
+    font-size:14px ;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+table tr{
+    height: 70px;
+    background-color:white;
+}
+table td{
+    padding: 5px;
+
+}
+.title td{
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+.title{
+    height: 50px;
+}
+table a{
+    display: block;
+    text-decoration: none;
+    color: #131313;    
+    font-weight: bold;
+}
+button{
+    background-color:rgb(1 161 75) ;
+    padding: 7px;
+    cursor: pointer;
+}

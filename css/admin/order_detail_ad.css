@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(236, 236, 236);
+}
+.order_detail_main{
+    padding-left: 50px;
+    width: 70%;
+    background-color: white;
+    margin-left: 50px
+}
+.order_detail_content{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+table{
+    width: 1000px;
+    border-spacing: 0;
+    font-size:14px ;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 50px;   background-color:white;
+}
+.table_pdt tr{
+    height: 70px;
+    
+}
+.table_user tr{
+    height: 50px;
+}
+table td{
+    padding: 5px;
+}
+.title_order_detail td{
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+.title_order_detail{
+    height: 50px;
+}
+table a{
+    display: block;
+    text-decoration: none;
+    color: #131313;    
+    font-weight: bold;
+}
+table img{
+    height: 70px;
+    width: auto;
+}
+.order_status_update{
+    height: 200px;
+    background-color: white;
+}
+button{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(1 161 75);
+  
+    float:right;
+    margin: 10px;
+ 
+}
+.order_status_update{
+    font-size:14px ;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 50px;   background-color:white;
+}
+.order_status_update label{
+    line-height: 50px;
+}
+.order_status_update select{
+    height: 30px;
+    width: 300px;
+
+}

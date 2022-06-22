@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    color: white;
+    line-height: 100px;
+
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(1 161 75);
+    margin-bottom: 50px;
+}
+
+.main_menu{
+    width: 300px;
+    background-color: rgb(1 161 75);
+    height: 600px;
+}
+
+.main_menu ul{
+    list-style: none;
+    width: 100%;
+}
+.main_menu ul li{
+    line-height: 50px;
+    width: 100%;
+    display: block;
+}
+.main_menu>ul>li>a{
+    border-bottom: 1px solid #ccc;
+}
+.main_menu a{
+    display: block;
+    font-size: 15px;
+    line-height: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding-left: 20px;
+}

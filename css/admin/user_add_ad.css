@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(236, 236, 236);
+}
+.user_add_main{
+    padding-left: 50px;
+    width: 70%;
+    background-color: white;
+    margin-left: 50px
+}
+.user_add_content{
+    display: flex;
+    flex-wrap: wrap;
+}
+table{
+    width: 80%;
+    border-spacing: 0;
+    font-size:14px ;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 50px;
+}
+.table_user tr{
+    height: 50px;
+}
+table td{
+    padding: 5px;
+    width: 200px;
+}
+button{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(1 161 75);
+    margin: 10px;
+
+}
+table input{
+    height: 30px;
+    width: 300px;
+}

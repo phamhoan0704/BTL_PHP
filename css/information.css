@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    padding: 1.25rem 0 3.15rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1200px;
+}
+
+.left_menu {
+    padding-left:5px;
+    display: block;
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.box_infor {
+    width: 1020px;
+    box-sizing: border-box;
+    margin-left: 1.6875rem;
+    min-width: 0;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 13%);
+    border-radius: 0.125rem;
+
+}
+
+.box_inforx {
+    padding: 0 30px 10px;
+    position: relative;
+    min-height: 100%;
+    position: relative;
+    min-height: 100%;
+}
+
+.top-box {
+    border-bottom: 0.0625rem solid #efefef;
+    padding: 1.175rem 0;
+
+}
+
+.top-box>h1 {
+
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    text-transform: capitalize;
+    color: #333;
+}
+
+.borderbox {
+    margin-top: 0.1875rem;
+    font-size: .875rem;
+    line-height: 1.0625rem;
+    color: #333;
+    text-transform:none;
+}
+
+
+.mainbox {
+    padding-top: 1.875rem;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.leftboxinfor {
+    flex: 1;
+    padding-right: 3.15rem;
+    width:60%;
+
+}
+
+.box {
+    align-items: center;
+    margin-bottom: 0.875rem;
+
+}
+
+.inp {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.label {
+    display: flex;
+    width: 40%;
+    text-align: right;
+    color: rgba(18, 19, 18, 0.8);
+    text-transform: capitalize;
+    overflow: hidden;
+}
+
+label {
+    text-align: right;
+    width: 100%;
+    padding-right:20px;
+}
+
+.inpuif {
+    width: 70%;
+    display: flex;
+    
+}
+
+.inpuif>input { 
+    border: 0;
+    padding-left:5px;
+    border-bottom: 1px #e8eeeb solid;
+}
+
+.txtdisable {}
+
+.input>span{
+    display:block;
+}
+.btn {
+    margin-left: 10px;
+    padding: 0 5px;
+}
+
+.btn>button {
+    margin-top: 5px;
+    color: blue;
+    border: none;
+    background: none;
+    border-bottom:1px solid rgba(0,0,0,.14);
+}
+
+.btn>button:hover {
+    color: red;
+}
+.btnsave{
+    width:60%;
+    text-align: left;
+    
+}
+.btnsave>button {
+   text-align: left;
+    background-color: #01a14b;
+    border:1px  #555 solid;
+    border-radius: 0.1rem;
+    padding:5px 10px;
+    color:#ffff;
+}
+.btnsave>button:hover{
+    background-color:#f32712
+}
+.imgbox2 {
+    width: 40%;
+    background-color: transparent;
+    border-left:1px #eeefff solid;
+    margin-bottom:30px;
+    margin-top:20px;
+    text-align: center;
+    justify-content: center;
+}
+.avatarbox{
+
+}
+.frame-avatar2 {
+
+    width: 5.25rem;
+    height: 5.25rem;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #efefef;
+    color: rgba(0, 0, 0, .09);
+
+}
+
+.avatar-img2 {
+    color: rgba(0, 0, 0, .09);
+    border-radius: 50%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+
+}
+
+.avatar-img2>i {
+    position: absolute;
+    font-size: 2em;
+    font-weight: 560;
+    top: 50%;
+    left: 50%;
+    transform: translate(-13px, -17px);
+    translate: (-50px, -50px);
+    line-height: 2rem;
+}
+
+.imgPurchase2>img {
+
+    width: 100%;
+    height: 100%;
+}
+.btn2>button{
+    padding: 8px;
+    background:none;
+    border:1px #efefef solid;
+    border-radius: 0.1rem;
+}
+.btn2 input{
+    width: 82px;
+}
+.fileimg span{
+    display:block;
+    color:  #868585  ;
+    text-align: center;
+    /* padding-left:1.75rem; */
+}

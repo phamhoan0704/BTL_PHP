@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.order_container{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.order_item{
+    width: 45%;
+}
+.order_inf{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+h1{
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+.order_name,
+.order_address
+{
+    width: 100%;
+}
+.order_email{
+    width: 60%;
+}
+.order_phone{
+    width:36%;
+    margin-left: 4%;
+}
+.order_name input,
+.order_email input,
+.order_phone input,
+.order_address input,
+.order_add_detail{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color:black;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 10px;
+}
+.order_name input::placeholder,
+.order_email input::placeholder,
+.order_phone input::placeholder,
+.order_address input::placeholder,
+.order_frm label
+{
+    color: rgb(1 161 75);
+    opacity: 0.6;
+}
+.order_name input:active .order_name input::placeholder{
+    color: red;
+}
+.order_frm{
+    width: 48%;
+}
+.frm_district{
+    margin-left: 4%;
+}
+.order_add_detail{
+    position: relative;
+    padding-top: 15px;
+}
+.label_add_detail{
+    position: absolute;
+    font-size: 14px;
+    z-index: 1;
+    margin-left: 15px;
+    color: rgb(165, 164, 164);
+    padding-top: 3px;
+}
+/*---------------------------*/
+.order_note textarea{
+    width: 100%;
+   
+}
+/*------------------------*/
+.order_payment{
+    width: 100%;  
+}
+.payment{
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(118, 118, 118);
+    margin-bottom: 10px;
+    position: relative;
+}
+.payment img{
+    height: 80%;
+    width: auto;
+    position: absolute;
+    top: 10%;
+    cursor: pointer;
+}
+.order_payment input{
+    margin-left: 10px;
+}
+.order_payment label{
+    font-size: 16px;
+    line-height: 50px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+.payment p{
+    padding-left: 60px;
+
+    display: inline-block; 
+} 
+.payment{
+    overflow: hidden;
+}
+/*-----------------------------------payment_bank_content*/
+#payment_bank_content{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    padding: 15px;
+    border: 1px solid#ccc;
+    background-color: rgb(1 161 75) ;
+    margin-bottom: 10px;
+}
+
+/*--------------------------order_purchase*/
+.order_purchase{
+    position: relative;
+}
+
+.order_inf button{
+    width: 140px;
+    background-color: rgb(1 161 75) ;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    height: 40px;
+    float: right;
+    position: absolute;
+    right: 0;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.order_btn{
+    position: relative;
+}
+
+.order_btn:before {
+    content: "Đặt hàng";
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    opacity: 0;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 50%;
+    background-color: rgb(201, 21, 21);
+    transition: .25s;
+    z-index: 2;
+    border-radius: 2px;
+  }
+.order_btn:hover:before {
+    width: 100%;
+    left: 0;
+    right: auto;
+    opacity: 1;
+    
+  }
+/*--------------------order_product*/
+.order_pdt{
+    margin-bottom: 50px;
+}
+.order_list_pdt table td
+{
+    padding: 10px;   
+}
+.order_list_pdt table td a{
+    display: block;
+    text-decoration: none;
+    color: #131313;
+    font-size:14px ;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.order_pdt_img{
+    border: 1px solid #ccc;
+    width: 50px;
+}
+.order_list_pdt table td img{
+    width: 80%;  
+    display: block;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.order_list_pdt p{
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+}
+/*-----------------------------------order_total*/
+.order_total table{
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+.order_total table td{
+    width: 50%;
+    height: 30px;
+}
+.order_money{
+    text-align: right;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.order_total_title{
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}

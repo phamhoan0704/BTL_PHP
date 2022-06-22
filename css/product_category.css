@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif!important;
+}
+
+:root {
+    --main-width: 90%;
+}
+
+.container {
+    width: var(--main-width);
+    margin: auto;
+    padding: 0;
+}
+
+.breadcrumb {
+    padding: 10px 0px;
+}
+
+.breadcrumb-arrow {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    border-radius: 4px;
+}
+
+.breadcrumb-arrow li {
+    display: inline-block;
+}
+
+.breadcrumb-arrow li a:hover {
+    color: #01a14b;
+}
+
+.breadcrumb-arrow li a {
+    text-decoration: none;
+    color: #131313;
+}
+
+.breadcrumb-arrow>li+li::before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0"
+}
+
+.breadcrumb>.active {
+    color: #777
+}
+
+.content {
+    display: flex;
+}
+
+.nav-menu {
+    width: 20%;
+    margin-right: 24px;
+}
+
+.nav-menu h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: 500;
+    border-bottom: 2px solid #e0e0e0!important;
+}
+
+.nav-menu-list {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+
+/* 
+.nav-menu-list>li+li::before {
+    border-top: 1px solid #e0e0e0;
+} */
+
+.nav-menu-list>li {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-item a {
+    display: block;
+    padding: 10px 15px;
+    color: #555555;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.nav-item:hover a {
+    color: #01a14b;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.main-content-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content-heading h1 {
+    font-size: 22px;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.custom-dropdown__select {
+    border: 1px solid #01a14b;
+    border-radius: 30px;
+    padding: 4px 8px;
+    position: relative;
+}
+
+.custom-dropdown__select::after {
+    content: "\25BC";
+    height: 1em;
+    font-size: .625em;
+    line-height: 1;
+    right: 1.2em;
+    top: 50%;
+    margin-top: -0.5em;
+    position: absolute;
+    pointer-events: none;
+}
+
+.custom-dropdown__select::before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    width: 2em;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0px 30px 30px 0px !important;
+    background: #01a14b;
+}
+
+.product-block {
+    --pro-col: 4;
+    --margin: 36px;
+    margin-right: var(--margin);
+    width: calc(calc(100% / var(--pro-col)) - var(--margin));
+}
+
+.breadcrumb {
+    background-color: white;
+}
