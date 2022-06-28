@@ -3,7 +3,7 @@
     session_start();
     $user_active = false;
     $total = 0;
-
+$_SESSION['user'] = 'luyen123';
     if(isset($_SESSION['user'])) 
     {
         $user_active=true;
@@ -71,24 +71,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="//theme.hstatic.net/200000287623/1000800165/14/favicon.png?v=126" type="image/png" />
     <title>Công ty Cổ phần xuất bản và truyền thông Trí Tuệ</title>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="../css/header.css">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+
+    
+    <!-- ---------------------------------------------------------------------- -->
+    <!-- Link CSS header -->
+    <link rel="stylesheet" href="../css/header.css">
+    <!-- Link CSS product -->
     <link rel="stylesheet" href="../css/product_list.css">
+    <!-- Link CSS Homepage -->
     <link rel="stylesheet" href="../css/home.css">
-
-<!--  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <!-- CSS order detail -->
     <link rel="stylesheet" href="../css/order_detail_style.css">
-<!--  -->
-<!-- product category -->
-<link rel="stylesheet" href="../css/product_list.css">
+    <!--  -->
+    <!-- product category -->
     <link rel="stylesheet" href="../css/product_category.css">
-
+    <!-- CSS Footer -->
     <link rel="stylesheet" href="../css/footer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
+
 </head>
 
 <body>
@@ -241,6 +247,3 @@
             </ul>
         </div>
     </div>
-</body>
-
-</html>
