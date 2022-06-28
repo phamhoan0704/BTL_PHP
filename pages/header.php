@@ -89,6 +89,17 @@
     <link rel="stylesheet" href="../css/product_category.css">
 
     <link rel="stylesheet" href="../css/footer.css">
+    <!-- link css login register -->
+    <link rel="stylesheet" href="../css/productdetail.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/log_in.css">
+    <link rel="stylesheet" href="../css/menuleft.css">
+    <link rel="stylesheet" href="../Font/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../css/user_order_list.css">
+    <link rel="stylesheet" href="../css/information.css">
+    <link rel="stylesheet" href="../css/productdetail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>

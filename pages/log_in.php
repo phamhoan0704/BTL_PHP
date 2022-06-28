@@ -1,7 +1,7 @@
 <?php
 include('./header.php');
 $iName = $iPass = $loginErr = "";
-    $nameErr = $passErr = "";
+    $nameErr = $passErr = $passmd5="";
 //Lưu ý: empty và isset sẽ trả về TRUE nếu biến không tồn tại 
 if (isset($_POST['submit_btn'])) {
     
@@ -61,60 +61,43 @@ if (isset($_POST['submit_btn'])) {
 }
 
 
-
-
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập</title>
-
-    <link rel="stylesheet" href="../css/log_in.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-
-<body>
-    <div class="container">
-        <div class="wapper">
-            <div class="tittle">
+    <div class="login_container">
+        <div class="login_wapper">
+            <div class="login_tittle">
                 <h2>Đăng nhập<h2>
             </div>
             <form method="post" action="">
-                <div class="group userip">
-                    <div class="loginf">
-                        <div class="icon">
-                            <i class="fa-regular fa-user"></i>
+                <div class="login_group userip">
+                    <div class="login_loginf">
+                        <div class="login_icon">
+                            <i class="login_fa-regular fa-user"></i>
                         </div>
                         <div id="user">
                             <input type="text" value="" name="ipnName" placeholder="Tên đăng nhập" autofocus>
                         </div>
                     </div>
 
-                    <div class="messerror"> <span><?php echo $nameErr; ?></span></div>
+                    <div class="login_messerror"> <span><?php echo $nameErr; ?></span></div>
                 </div>
-                <div class="group passwordip">
-                    <div class="loginf">
-                        <div class="icon">
-                            <i class="fa-solid fa-lock"></i>
+                <div class="login_group passwordip">
+                    <div class="login_loginf">
+                        <div class="login_icon">
+                            <i class="login_fa-solid fa-lock"></i>
                         </div>
                         <div id="pass">
                             <input type="password" id="ipnPassword" placeholder="Mật khẩu" name="ipnPass">
                         </div>
                         <div id="showpass">
                             <button id="btnPassword" type="button">
-                                <i class="fa-regular fa-eye" id="btnEye"></i>
+                                <i class="login_fa-regular fa-eye" id="btnEye"></i>
 
                             </button>
 
                         </div>
                     </div>
-                    <div class="messerror">
+                    <div class="login_messerror">
                         <span>
                             <?php if($passErr=="")
                             echo ("$loginErr");
@@ -124,10 +107,10 @@ if (isset($_POST['submit_btn'])) {
                          ?></span>
                     </div>
                 </div>
-                <div class="submit_btn">
+                <div class="login_submit_btn">
                     <button name="submit_btn">Đăng nhập</button>
                 </div>
-                <div class="sp1">
+                <div class="login_sp1">
                 <div>
                 <span ><a>Quên mật khẩu</a></span>
 
@@ -143,7 +126,5 @@ if (isset($_POST['submit_btn'])) {
     </div>
 
     <script src="../js/log_in.js"></script>
-</body>
 
-</html>
 <?php include('./footer.php');

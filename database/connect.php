@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost","root","","qlbh_sach");
+$conn = mysqli_connect("localhost","root","","webbantruyen");
 
 mysqli_set_charset($conn,"utf8");
 // Check connection
