@@ -94,8 +94,6 @@ if (isset($_POST['name'])) {
 
 ?>
 
-
-
     <form method="POST">
 
 

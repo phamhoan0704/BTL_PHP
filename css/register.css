@@ -4,14 +4,14 @@
     box-sizing: border-box;
     
 }
-.container{
+.register_container{
     display: flex;
     justify-content: center;
     border-radius: 20px;
     
 }
 
-.wapper{
+.register_wapper1{
     border-radius: 0.3rem;
     display: flex;
     width: 20rem;
@@ -22,20 +22,20 @@
     padding: 1rem 0.8rem;
        
 }
-.fa-block{
+.register_fa-block{
     
 }
-.tittle{
+.register_tittle{
     margin-bottom: 20px;
     font-size: 20px;
 
 }
-.form{
+.register_form{
     padding:0 10px 10px;
 
 }
 /* begin text input */
-.group{
+.register_group{
     display: flex;
     justify-content: space-around;
      flex-direction: column;
@@ -45,13 +45,13 @@
     background-color:#fff;
     margin: 15px 0px;
     border: solid 1px #E7E7E7;;
-    margin-bottom: 0.675rem; */
+    margin-bottom: 0.register_675rem; */
 
 }
-.userip{
+.register_userip{
 
 }
-.loginf{
+.register_loginf{
     
     display: flex;
     font-size: 15px;
@@ -69,7 +69,7 @@
      /*
     border: solid 1px #E7E7E7;; */
 }
-.passwordipagain{
+.register_passwordipagain{
     margin-top: 3px;
 }
 
@@ -81,7 +81,7 @@
    /* // border: solid 1px #E7E7E7; */
     border: 0px;
 }
-.icon{
+.register_icon{
     height: 37px;
     background-color:rgb(218, 228, 219);
     border: solid 1px #e4dddd;
@@ -109,7 +109,7 @@
     line-height: 21px;
 }
 
-.messerror{
+.register_messerror{
     color:red;
     min-width: 1rem;
     font-size: 0.75rem;
@@ -117,15 +117,15 @@
     padding:0.25rem 0 0;
     background: unset!important;
 }
-.messerror >span{
+.register_messerror >span{
     background: none;
     color:red;
 }
-.submit_btn{
+.register_submit_btn{
     margin-bottom: 20px;
 }
 
-.submit_btn button{
+.register_submit_btn button{
     text-align: center;
     font-size: 16px;
     color:#fff;
@@ -137,29 +137,29 @@
     border-radius:0.3rem;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.sp1 span{
+.register_sp1 span{
     display:block;
     padding:1px 1px 10px;
 }
-.sp1 span>a{
+.register_sp1 span>a{
     color:blue;
 
 }
 
-.separator{
+.register_separator{
     /* display: flex; */
     text-align: center;
      overflow: hidden;
    
 }
-.separator>span{
+.register_separator>span{
     position: relative;
     display: inline-block;
    
 
 }
-.separator>span::before,
-.separator>span::after{
+.register_separator>span::before,
+.register_separator>span::after{
     content: "";
     position: absolute;
     height: 1px;
@@ -169,22 +169,22 @@
     display: block;
 
 }
-.separator>span::before{
+.register_separator>span::before{
     left: 100%;
     margin-left: 10px;
     
 }
-.separator>span::after{
+.register_separator>span::after{
     right:100%;
     margin-right: 10px;
 }
 
-.orthericon{
+.register_orthericon{
     display: flex;
     flex-direction: column;
 }
 
-.quick_login{
+.register_quick_login{
     display: flex;
     justify-content: center;
     text-align: center;
@@ -194,15 +194,15 @@
     margin-top: 16px;
     cursor: pointer;
 }
-.quick_login i{
+.register_quick_login i{
     padding:0px 10px 0px;
 }
-.facebook{
+.register_facebook{
     margin-top: 20px;
 
     background-color: rgb(91, 91, 238);
 }
-.google{
+.register_google{
     background-color: red;
 
 }

@@ -1,7 +1,8 @@
 <?php include('./header.php');
-
+ $order_list=[];
 if(!isset($_SESSION['user'])){
     echo"<script>window.location.href='./log_in.php'<script>";
+    
 }
 else{
     $usernanme=$_SESSION['user'];
@@ -15,20 +16,7 @@ else{
     }
 }
 ?>
-   
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/user_order_list.css">
-</head>
-
-<body>
     <div class="container">
     <div class="left_menu">
 <?php include('menuleft.php');?>
@@ -46,7 +34,8 @@ else{
                         <th></th>
 
                     </tr>
-                    <?php if(sizeof($order_list)!=0)
+                   
+                    <?php if(sizeof($order_list)!=null)
                      foreach($order_list as $item):
                         ?>
               
@@ -94,7 +83,5 @@ else{
         </div>
     </div>
     </div>
-</body>
 
-</html>
 <?php include('./footer.php');?>
