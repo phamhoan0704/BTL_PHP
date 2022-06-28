@@ -97,72 +97,62 @@ if (isset($_POST['submit_btn'])) {
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký thành viên</title>
-
-    <link rel="stylesheet" href="../css/register.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
 
 <body>
-    <div class="container">
-        <div class="wapper">
-            <div class="tittle">
+    <div class="register_container">
+        <div class="register_wapper">
+            <div class="register_tittler">
                 <h2>Tạo tài khoản<h2>
             </div>
-            <form class="form" method="post">
+            <form class="register_form" method="post">
 
-                <div class="group userip">
-                    <div class="loginf">
-                        <div class="icon">
-                            <i class="fa-regular fa-user"></i>
+                <div class="register_group userip">
+                    <div class="register_loginf">
+                        <div class="register_icon">
+                            <i class="register_fa-regular fa-user"></i>
                         </div>
                         <div id="user">
                             <input type="text" value="" name="ipnName" placeholder="Tên đăng nhập">
                         </div>
                     </div>
 
-                    <div class="messerror spName ">
+                    <div class="register_messerror spName ">
                         <span><?php echo $usernameErr; ?></span>
                     </div>
                 </div>
-                <div class="group passwordip">
-                    <div class="loginf">
-                        <div class="icon">
-                            <i class="fa-solid fa-lock"></i>
+                <div class="register_group passwordip">
+                    <div class="register_loginf">
+                        <div class="register_icon">
+                            <i class="register_fa-solid fa-lock"></i>
                         </div>
                         <div id="pass">
                             <input type="password" id="ipnPassword" placeholder="Mật khẩu" name="ipnPass" value="">
                         </div>
                         <div id="showpass">
                             <button id="btnPassword" type="button">
-                                <i class="fa-regular fa-eye" id="btnEye"></i>
+                                <i class="register_fa-regular fa-eye" id="btnEye"></i>
 
                             </button>
 
                         </div>
 
                     </div>
-                    <div class="messerror ">
+                    <div class="register_messerror ">
                         <span><?php echo $passErr; ?></span>
                     </div>
 
                 </div>
-                <div class="group passwordipagain">
-                    <div class="loginf">
-                        <div class="icon">
-                            <i class="fa-solid fa-lock"></i>
+                <div class="register_group passwordipagain">
+                    <div class="register_loginf">
+                        <div class="register_icon">
+                            <i class="register_fa-solid fa-lock"></i>
                         </div>
                         <div id="pass">
                             <input type="password" id="ipnPasswordAgain" placeholder="Xác nhận mật khẩu" name="ipnPassAgain" value="">
                         </div>
                         <div id="showpass">
                             <button id="btnPasswordAgain" type="button">
-                                <i class="fa-regular fa-eye" id="btnEye"></i>
+                                <i class="register_fa-regular fa-eye" id="btnEye"></i>
 
                             </button>
 
@@ -170,64 +160,64 @@ if (isset($_POST['submit_btn'])) {
 
 
                     </div>
-                    <div class="messerror ">
+                    <div class="register_messerror ">
                         <span><?php echo $passAgainErr; ?></span>
                     </div>
-                    <div class="group emailip">
-                        <div class="loginf">
-                            <div class="icon">
-                                <i class="fa-regular fa-envelope"></i>
+                    <div class="register_group emailip">
+                        <div class="register_loginf">
+                            <div class="register_icon">
+                                <i class="register_fa-regular fa-envelope"></i>
                             </div>
                             <div id="user">
                                 <input type="text" value="" name="ipnEmail" placeholder="Email">
                             </div>
                         </div>
 
-                        <div class="messerror spName ">
+                        <div class="register_messerror spName ">
                             <span><?php echo $emailErr; ?></span>
                         </div>
                     </div>
-                    <div class="group phoneip">
-                        <div class="loginf">
-                            <div class="icon">
-                                <i class="fa-solid fa-phone"></i>
+                    <div class="register_group phoneip">
+                        <div class="register_loginf">
+                            <div class="register_icon">
+                                <i class="register_fa-solid fa-phone"></i>
                             </div>
                             <div id="user">
                                 <input type="text" value="" name="ipnPhone" placeholder="Số điện thoại">
                             </div>
                         </div>
 
-                        <div class="messerror spName ">
+                        <div class="register_messerror spName ">
                             <span><?php echo $phoneErr; ?></span>
                         </div>
                     </div>
-                    <div class=" submit_btn">
+                    <div class="register_ submit_btn">
                         <button name="submit_btn">Đăng ký</button>
                     </div>
 
                     <!-- <span>hoặc</span><hr> -->
-                    <div class="separator">
+                    <div class="register_separator">
                         <span>hoặc</span>
                     </div>
-                    <!-- <div class="orthericon">
+                    <!-- <div class="register_orthericon">
 
-                        <div class="quick_login facebook">
-                            <div class="logo">
-                                <i class="fab fa-facebook-f"></i>
+                        <div class="register_quick_login facebook">
+                            <div class="register_logo">
+                                <i class="register_fab fa-facebook-f"></i>
                             </div>
-                            <div class="text">Đăng nhập bằng Facebook</div>
+                            <div class="register_text">Đăng nhập bằng Facebook</div>
 
 
                         </div>
-                        <div class="quick_login google">
-                            <div class="logo">
-                                <i class="fab fa-google-plus-g"></i>
+                        <div class="register_quick_login google">
+                            <div class="register_logo">
+                                <i class="register_fab fa-google-plus-g"></i>
                             </div>
-                            <div class="text">Đăng nhập bằng Google</div>
+                            <div class="register_text">Đăng nhập bằng Google</div>
                         </div>
 
                     </div> -->
-                    <div class="sp1">
+                    <div class="register_sp1">
                         <span>Bạn đã có tài khoản? Đăng nhập <a href="../includes/log_in.php">Tại đây</a></span>
                     </div>
 

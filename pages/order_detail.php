@@ -16,9 +16,7 @@
     
     
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<body>
+
     <div class="order_detail_container">        
         <div class="order_detail_customer">
             <h1>Thông tin người nhận</h1>
@@ -178,5 +176,3 @@
         </div>
     </div>
     <?php include 'footer.php'?>
-</body>
-</html>
