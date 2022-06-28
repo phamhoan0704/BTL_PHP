@@ -142,8 +142,8 @@ if (isset($_POST['name'])) {
 
                     <div class="order_payment">
                         <div class="payment" class="order_payment">
+                            
                             <input type="radio" id="payment_bank" name="payment" value="1">
-
                             <label for="payment_bank" onclick="show()">
                                 <img src="../img/icon/money-transfer.png" alt="">
                                 <p>Thanh toán qua ngân hàng </p>

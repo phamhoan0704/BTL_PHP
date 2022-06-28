@@ -117,19 +117,19 @@ include 'header.php';
         <div class="cart_btn">
             <div class="cart_return">
                 <a href="home.php">
-                    <i class="fa-solid fa-reply"></i>
+                    <i class="fa fa-solid fa-reply"></i>
                     <p>Tiếp tục mua hàng</p>
                 </a>
             </div>
 
                 <button type="submit" onclick="" name="action" value="order">
-               Thanh toán<i class="fa-solid fa-angles-right"></i>
+               Thanh toán<i class="fa fa-solid fa-angles-right"></i>
                 
              </button>
  
                     <button type="submit" onclick="" name="action" value="update">
                     Cập nhật
-                    <i class="fa-solid fa-angles-right"></i>
+                    <i class="fa fa-solid fa-angles-right"></i>
                     </button>      
        </form>           
         </div>

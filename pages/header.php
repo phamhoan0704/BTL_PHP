@@ -3,7 +3,7 @@
     session_start();
     $user_active = false;
     $total = 0;
-$_SESSION['user'] = 'luyen123';
+    $_SESSION['user'] = "luyen123";
     if(isset($_SESSION['user'])) 
     {
         $user_active=true;
@@ -93,18 +93,27 @@ $_SESSION['user'] = 'luyen123';
     <!-- CSS Footer -->
     <link rel="stylesheet" href="../css/footer.css">
 
+    <!-- <link rel="stylesheet" href="../font/fontawesome-free-6.1.1-web/css/all.css"> -->
+
+    <link rel="stylesheet" href="../css/cart_style.css">
+
+    <link rel="stylesheet" href="../css/order_style.css">
+
     <!-- link css login register -->
     <link rel="stylesheet" href="../css/productdetail.css">
-    <link rel="stylesheet" href="../css/register.css">
-    <link rel="stylesheet" href="../css/log_in.css">
-    <link rel="stylesheet" href="../css/menuleft.css">
-    <link rel="stylesheet" href="../Font/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="../css/user_order_list.css">
-    <link rel="stylesheet" href="../css/information.css">
-    <link rel="stylesheet" href="../css/productdetail.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+    
+    <link rel="stylesheet" href="../css/log_in.css">
+    
+    <link rel="stylesheet" href="../css/menuleft.css">
+    
+    
+    <link rel="stylesheet" href="../css/user_order_list.css">
+    <link rel="stylesheet" href="../css/productdetail.css">
+    
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/information.css">
+    <link rel="stylesheet" href="../font/fontawesome/css/all.css">
 </head>
 
 <body>
@@ -151,7 +160,7 @@ $_SESSION['user'] = 'luyen123';
                 <a href="cart_view.php" class="site-header__cart-container">
                     <div class="site-header__cart">
                         <div class="header__cart-wrap">
-                            <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                            <i class="header__cart-icon fa fa-solid fa-cart-plus" style="font-family: "Font Awesome 6 Free"!important;"></i>
                             <span class="header__cart-notice"><?php echo $total?></span>
                             <div class="header__cart-list">
                                 <div class="header__cart-list-heading">

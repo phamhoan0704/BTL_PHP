@@ -113,7 +113,7 @@
             </div>
             <div class="product-category-main-content">
                 <div class="main-content-heading">
-                    <h1>Tất cả sản phẩm</h1>
+                    <h1 style="border:none;">Tất cả sản phẩm</h1>
                     <!-- <div class="browse-tags">
                         <span>Sắp xếp theo:</span>
                         <span class="custom-dropdown">

@@ -17,6 +17,11 @@ html {
     --header-width: 90%;
 }
 
+.fa-solid,
+.fa-brands {
+    /* font-family: "Font Awesome 6 Free"!important; */
+}
+
 #header {
     margin-bottom: 24px;
 }
@@ -68,8 +73,8 @@ html {
 
 .sep {
     color: white;
-    
 }
+
 
 /* SITE HEADER */
 

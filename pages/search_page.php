@@ -52,7 +52,7 @@
     
 </head>
 <body>
-    <div class="container">
+    <div class="search-container">
         <h1>Tìm kiếm</h1>
         <span>Kết quả tìm kiếm cho <strong><?php echo $search_pdt; ?></strong></span>
         <div class="product-list">
