@@ -38,18 +38,7 @@ include 'header.php';
     include 'cart_function.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/cart_style.css">
-    <link rel="stylesheet" href="../font/fontawesome-free-6.1.1-web/css/all.css">
 
-</head>
-<body>
     <div class="cart_container">
           
         <h1>Giỏ hàng</h1>
@@ -147,5 +136,3 @@ include 'header.php';
     </div>
     </div>
     <?php include 'footer.php'?>
-</body>
-</html>

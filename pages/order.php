@@ -94,13 +94,6 @@ if (isset($_POST['name'])) {
 
 ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
-
-
-
-<body>
     <form method="POST">
 
 
@@ -244,6 +237,3 @@ if (isset($_POST['name'])) {
         </script>
     </form>
     <?php include 'footer.php'  ?>
-</body>
-
-</html>
