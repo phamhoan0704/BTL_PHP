@@ -140,16 +140,16 @@
             <p> Công ty Cổ phần Xuất bản và Truyền thông IPM </p>
             <ul class="info-address">
                 <li>
-                    <i class="fa-solid fa-location-dot"></i>
+                    <i class="fa fa-solid fa-location-dot"></i>
                     <span>110 Nguyễn Ngọc Nại Hà Nội</span>
                 </li>
                 <li>
-                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa fa-solid fa-envelope"></i>
                     <span>online.ipmvn@gmail.com</span>
                 </li>
 
                 <li>
-                    <i class="fa-solid fa-square-phone"></i> <span>03 3319 3979</span>
+                    <i class="fa fa-solid fa-square-phone"></i> <span>03 3319 3979</span>
                 </li>
 
             </ul>

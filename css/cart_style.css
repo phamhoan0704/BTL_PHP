@@ -1,15 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.cart_container{
+.cart_container {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
 }
-h1{
+
+h1 {
     font-weight: bold;
     color: #000000;
     line-height: 36px;
@@ -19,71 +15,89 @@ h1{
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
 }
-.cart_detail{
+
+.cart_detail {
     width: 100%;
 }
-.cart_title{
+
+.cart_title {
     width: 100%;
     height: 36px;
     display: flex;
     border-bottom: 1px solid rgb(1 161 75);
-    color:#555555;
+    color: #555555;
 }
-.cart_img{
-    width: 10%;  
+
+.cart_img {
+    width: 10%;
 }
-.cart_name{
+
+.cart_name {
     width: 45%;
 }
-.cart_qty{
+
+.cart_qty {
     width: 20%;
 }
-.cart_price{
+
+.cart_price {
     width: 20%;
 }
-.cart_remove{
+
+.cart_remove {
     width: 5%;
 }
-.cart_title_item p{
-    line-height:36px ;
+
+.cart_title_item p {
+    line-height: 36px;
     font-size: 14px;
-    color:#555555;
+    color: #555555;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
+
+
 /*--------------------*/
-.cart_list .cart_item{
+
+.cart_list .cart_item {
     display: flex;
     width: 100%;
     height: 80px;
-    border-bottom:1px solid rgb(1 161 75) ;
+    border-bottom: 1px solid rgb(1 161 75);
 }
-.cart_list .cart_img img{
-    max-width: 50px;
+
+.cart_list .cart_img img {
+    max-width: 45px;
     display: block;
-    height:auto;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5px;
 }
-.cart_list .cart_name a{
+
+.cart_list .cart_name a {
     display: block;
     text-decoration: none;
-    color: #131313;    font-size:14px ;
+    color: #131313;
+    font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     line-height: 80px;
 }
-.cart_list .cart_name{
-     overflow: hidden;
+
+.cart_list .cart_name {
+    overflow: hidden;
 }
-.cart_name a:hover{
+
+.cart_name a:hover {
     color: rgb(1 161 75);
 }
-.cart_list .cart_qty{
+
+.cart_list .cart_qty {
     line-height: 80px;
 }
-.cart_qty input{
+
+.cart_qty input {
     width: 64px;
     text-align: center;
     height: 30px;
@@ -94,41 +108,51 @@ h1{
     outline: none;
     padding-left: 15px;
 }
-.cart_price{
+
+.cart_price {
     line-height: 80px;
-    color:#555555;
+    color: #555555;
 }
-.cart_remove a{
+
+.cart_remove a {
     display: block;
-    text-decoration: none;  
-    font-size:14px ;
+    text-decoration: none;
+    font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     line-height: 80px;
-    color:#555555;
+    color: #555555;
 }
+
+
 /*----------------------------*/
-.cart_total{
+
+.cart_total {
     width: 100%;
     display: flex;
 }
+
 .cart_total .cart_qty p,
-.cart_total .cart_price p{
+.cart_total .cart_price p {
     line-height: 36px;
     font-size: 14px;
     color: #555555;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
+
+
 /*---------------------------------*/
-.cart_btn{
+
+.cart_btn {
     width: 100%;
     margin-top: 100px;
     height: 40px;
 }
-.cart_btn button{
+
+.cart_btn button {
     width: 140px;
     height: 100%;
-    background-color:rgb(1 161 75) ;
+    background-color: rgb(1 161 75);
     border: none;
     border-radius: 2px;
     cursor: pointer;
@@ -137,35 +161,41 @@ h1{
     float: right;
     margin-right: 20px;
 }
-.payment{
+
+.payment {
     display: inline-block;
     text-decoration: none;
-    color: white;    font-size:14px ;
+    color: white;
+    font-size: 14px;
     font-family: 'Open Sans', sans-serif;
-    line-height: 40px; 
+    line-height: 40px;
     width: 100%;
-   
 }
-.cart_return{
-    width: 30%; 
+
+.cart_return {
+    width: 30%;
     float: left;
     height: 100%;
 }
-.cart_return a{
+
+.cart_return a {
     display: block;
     text-decoration: none;
-    color: #131313;   
-    font-size:14px ;
+    color: #131313;
+    font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     line-height: 40px;
     width: 100%;
 }
-.cart_return p{
+
+.cart_return p {
     display: inline-block;
 }
 
-.cart_return a:hover{
-    color:rgb(1 161 75) ;
+.cart_return a:hover {
+    color: rgb(1 161 75);
 }
+
+
 /*------------------------------*/

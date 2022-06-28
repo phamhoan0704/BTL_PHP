@@ -22,7 +22,7 @@ else{
                            
                             <div class="avatar-img">
                            <img src="../img/product/<?php echo $img?>" alt="">
-                                <i class="fa-regular fa-user"></i>
+                                <i class="fa fa-regular fa-user"></i>
                             </div>
                         </div>
                     </a>
@@ -33,7 +33,7 @@ else{
                     </div>
                     <div class="altterInfor">
                         <a href="profile.php" class="altter">
-                            <i class="fa-solid fa-pen"></i> Sửa hồ sơ
+                            <i class="fa fa-solid fa-pen"></i> Sửa hồ sơ
                         </a>
                     </div>
                 </div>

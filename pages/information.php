@@ -56,7 +56,7 @@ else {
 
 
 
-    <div class="container">
+    <div class="container-information">
         <div class="left_menu">
             <?php include './menuleft.php' ?>
         </div>
@@ -161,7 +161,7 @@ else {
                             <a href="" class="avatar">
                                 <div class="frame-avatar2">
                                     <div class="avatar-img2">
-                                        <i class="fa-regular fa-user">
+                                        <i class="fa fa-regular fa-user">
                                             <img src="../img/user/<?php echo $img ?>" alt="">
                                         </i>
                                     </div>

@@ -109,7 +109,7 @@ if (isset($_POST['submit_btn'])) {
                 <div class="register_group userip">
                     <div class="register_loginf">
                         <div class="register_icon">
-                            <i class="register_fa-regular fa-user"></i>
+                            <i class="register_fa-regular fa fa-user"></i>
                         </div>
                         <div id="user">
                             <input type="text" value="" name="ipnName" placeholder="Tên đăng nhập">
@@ -123,14 +123,14 @@ if (isset($_POST['submit_btn'])) {
                 <div class="register_group passwordip">
                     <div class="register_loginf">
                         <div class="register_icon">
-                            <i class="register_fa-solid fa-lock"></i>
+                            <i class="register_fa-solid fa fa-lock"></i>
                         </div>
                         <div id="pass">
                             <input type="password" id="ipnPassword" placeholder="Mật khẩu" name="ipnPass" value="">
                         </div>
                         <div id="showpass">
                             <button id="btnPassword" type="button">
-                                <i class="register_fa-regular fa-eye" id="btnEye"></i>
+                                <i class="register_fa-regular fa fa-eye" id="btnEye"></i>
 
                             </button>
 
@@ -145,14 +145,14 @@ if (isset($_POST['submit_btn'])) {
                 <div class="register_group passwordipagain">
                     <div class="register_loginf">
                         <div class="register_icon">
-                            <i class="register_fa-solid fa-lock"></i>
+                            <i class="register_fa-solid fa fa-lock"></i>
                         </div>
                         <div id="pass">
                             <input type="password" id="ipnPasswordAgain" placeholder="Xác nhận mật khẩu" name="ipnPassAgain" value="">
                         </div>
                         <div id="showpass">
                             <button id="btnPasswordAgain" type="button">
-                                <i class="register_fa-regular fa-eye" id="btnEye"></i>
+                                <i class="register_fa-regular fa fa-eye" id="btnEye"></i>
 
                             </button>
 
@@ -166,7 +166,7 @@ if (isset($_POST['submit_btn'])) {
                     <div class="register_group emailip">
                         <div class="register_loginf">
                             <div class="register_icon">
-                                <i class="register_fa-regular fa-envelope"></i>
+                                <i class="register_fa-regular fa fa-envelope"></i>
                             </div>
                             <div id="user">
                                 <input type="text" value="" name="ipnEmail" placeholder="Email">
@@ -180,7 +180,7 @@ if (isset($_POST['submit_btn'])) {
                     <div class="register_group phoneip">
                         <div class="register_loginf">
                             <div class="register_icon">
-                                <i class="register_fa-solid fa-phone"></i>
+                                <i class="register_fa-solid fa fa-phone"></i>
                             </div>
                             <div id="user">
                                 <input type="text" value="" name="ipnPhone" placeholder="Số điện thoại">
@@ -203,7 +203,7 @@ if (isset($_POST['submit_btn'])) {
 
                         <div class="register_quick_login facebook">
                             <div class="register_logo">
-                                <i class="register_fab fa-facebook-f"></i>
+                                <i class="register_fab fa fa-facebook-f"></i>
                             </div>
                             <div class="register_text">Đăng nhập bằng Facebook</div>
 
@@ -211,7 +211,7 @@ if (isset($_POST['submit_btn'])) {
                         </div>
                         <div class="register_quick_login google">
                             <div class="register_logo">
-                                <i class="register_fab fa-google-plus-g"></i>
+                                <i class="register_fab fa fa-google-plus-g"></i>
                             </div>
                             <div class="register_text">Đăng nhập bằng Google</div>
                         </div>

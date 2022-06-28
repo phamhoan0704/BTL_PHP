@@ -72,7 +72,7 @@ if (isset($_POST['submit_btn'])) {
                 <div class="login_group userip">
                     <div class="login_loginf">
                         <div class="login_icon">
-                            <i class="login_fa-regular fa-user"></i>
+                            <i class="login_fa-regular fa fa-user"></i>
                         </div>
                         <div id="user">
                             <input type="text" value="" name="ipnName" placeholder="Tên đăng nhập" autofocus>
@@ -84,14 +84,14 @@ if (isset($_POST['submit_btn'])) {
                 <div class="login_group passwordip">
                     <div class="login_loginf">
                         <div class="login_icon">
-                            <i class="login_fa-solid fa-lock"></i>
+                            <i class="login_fa-solid fa fa-lock"></i>
                         </div>
                         <div id="pass">
                             <input type="password" id="ipnPassword" placeholder="Mật khẩu" name="ipnPass">
                         </div>
                         <div id="showpass">
                             <button id="btnPassword" type="button">
-                                <i class="login_fa-regular fa-eye" id="btnEye"></i>
+                                <i class="login_fa-regular fa fa-eye" id="btnEye"></i>
 
                             </button>
 

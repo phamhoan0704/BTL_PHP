@@ -15,7 +15,7 @@
                     <span>Hotline: 03 2838 3979</span>
                 </p>
                 <p class="footer-contact-row">
-                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa fa-solid fa-envelope"></i>
                     <span>Email: online.ipmvn@gmail.com</span>
                 </p>
                 <p class="footer-contact-row">
@@ -48,15 +48,15 @@
     
                 <div id="footer-social-info">
                     <a class="footer-social-link" href="" target="_blank">
-                        <i class="footer-social-icon fa-brands fa-facebook-f"></i>
+                        <i class="footer-social-icon fa fa-brands fa-facebook" style="font-family: 'Font Awesome 6 Brands'!important;    line-height: 32px;"></i>
                         <span>Facebook</span>
                     </a>
                     <a class="footer-social-link" href="" target="_blank">
-                        <i class="footer-social-icon fa-brands fa-twitter"></i>
+                        <i class="footer-social-icon fa fa-brands fa-twitter" style="font-family: 'Font Awesome 6 Brands'!important;     line-height: 32px;"></i>
                         <span>Twitter</span>
                     </a>
                     <a class="footer-social-link" href="" target="_blank">
-                        <i class="footer-social-icon fa-brands fa-youtube"></i>
+                        <i class="footer-social-icon fa fa-brands fa-youtube" style="font-family: 'Font Awesome 6 Brands'!important;     line-height: 32px;"></i>
                         <span>Youtube</span>
                     </a>               
                 </div>
