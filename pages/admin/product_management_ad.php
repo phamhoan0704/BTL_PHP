@@ -11,8 +11,7 @@ include '../../database/connect.php'
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../css/admin/product_management_ad.css">
-    <link rel="stylesheet" href="../../css/home_tab.css">
-
+    <link rel="stylesheet" href="../../Css/admin/tab.css">
 </head>
 
 <body>
@@ -42,21 +41,21 @@ include '../../database/connect.php'
     <div class="order_management_content">
 
         <?php include 'home_ad.php' ?>
-        <form method="POST" action="product_add_ad.php">
-            <div class="order_management_main">
-                <div class="inherit_home-tabs">
-                    <div class="inherit_home-tab-title">
-                        <div class="inherit_home-tab-item active">
+        <div class="order_management_main">
+            <form method="POST" action="product_add_ad.php">
+                <div class="home-tabs">
+                    <div class="home-tab-title">
+                        <div class="home-tab-item active">
                             <span>Đang hoạt động</span>
                         </div>
-                        <div class="inherit_home-tab-item">
+                        <div class="home-tab-item">
                             <span>Đã ẩn</span>
                         </div>
                         <div class="line">
                         </div>
                     </div>
-                    <div class="inherit_home-tab-content">
-                        <div class="inherit_home-tab-pane active">
+                    <div class="home-tab-content">
+                        <div class="home-tab-pane active">
                             <table>
                                 <tr>
                                     <td colspan="7"><button type="submit" name="add">Thêm sản phẩm</button></td>
@@ -89,7 +88,7 @@ include '../../database/connect.php'
 
                             </table>
                         </div>
-                        <div class="inherit_home-tab-pane">
+                        <div class="home-tab-pane">
                             <table>
 
                                 <tr class="title_order">
@@ -116,12 +115,14 @@ include '../../database/connect.php'
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </form>
+        </div>
     </div>
-    </form>
-    </div>
+    <?php include 'footer_ad.php'; ?>
+    <script>
+        document.getElementById("header-product").style.background = "rgb(1 161 75)";
+        document.getElementById("header-product").style.color = "white";
+    </script>
 </body>
-<script src="../../js/inherit_home-tab.js"></script>
-
+ <script src="../../js/home_tab.js "></script>
 </html>

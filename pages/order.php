@@ -87,6 +87,7 @@ if (isset($_POST['btn_order'])) {
     order_date,order_status,order_total,order_delivery,order_note,order_payment,order_payment_status)
          VALUES ('$id_user','$name','$phone','$email','$addess','$date','$status','$t','$delivery','$note','$payment_method',1)");
     mysqli_query($conn, "DELETE FROM tbl_cart_detail WHERE cart_id='$cart_id';");
+    
     if ($query) {
         // $id_order = mysqli_insert_id($conn);
         $sql1 = " SELECT *

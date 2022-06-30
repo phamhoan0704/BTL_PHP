@@ -120,7 +120,9 @@
                 <ul class="nav-menu-list">
                      <?php
                         for($i=0;$i<count($category_list);$i++) {
-                            echo '<li class="nav-item"><a href="product_category.php?id='.$category_list[$i]['category_id'].'">'.$category_list[$i]['category_name'].'</a></li>';
+                            echo '<li class="nav-item"><a';
+                            if($category_id == $category_list[$i]['category_id']) echo ' style="color: #01a14b;"';
+                            echo ' href="product_category.php?id='.$category_list[$i]['category_id'].'">'.$category_list[$i]['category_name'].'</a></li>';
                         }
                     ?>
                 </ul>

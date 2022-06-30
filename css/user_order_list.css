@@ -1,10 +1,11 @@
-.container {
+.user_order_container {
     position: relative;
     display: flex;
-    padding: 1.25rem 0 3.15rem;
+    padding: 3.5rem 5rem 1.25rem;
     margin-right: auto;
     margin-left: auto;
-    width: 1200px;
+    width: 90%;
+    width: 90%;
 }
 
 .left_menu {
@@ -15,9 +16,9 @@
 }
 
 .box_infor {
-    width: 1020px;
+    width: 85%;
     box-sizing: border-box;
-    margin-left: 1.6875rem;
+    margin-left: 16px;
     min-width: 0;
     background: #fff;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 13%);
@@ -44,9 +45,8 @@
 
 #tb1 th {
     padding: 20px;
-    border-top: 2px  #009234 solid;
-     text-align: left;
-     background-color: rgb(217 218 214 / 49%);
+    text-align: left;
+    background-color: rgb(217 218 214 / 49%);
 }
 
 tr {
@@ -72,19 +72,29 @@ tr {
     padding: 5px;
     background-color: #009234;
 }
-.btnhuy{
+
+.btnhuy {
     border-radius: 2px;
-    border:none; 
+    border: none;
     color: rgb(243, 19, 19);
-    padding:5px 8px;
+    padding: 5px 8px;
     background: none;
-   
 }
-.btnhuy:hover{
-    color:#050505;
-    background:rgb(243, 19, 19); ;
+
+.btnhuy:hover {
+    color: #050505;
+    background: rgb(243, 19, 19);
 }
+
 .icon_order img {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
+}
+
+.status_order span {
+    font-size: 14px;
+}
+
+.inherit_home-tab-content {
+    margin-top: 24px;
 }

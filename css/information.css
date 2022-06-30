@@ -1,10 +1,10 @@
 .infor_container {
     position: relative;
     display: flex;
-    padding: 1.25rem 5rem 24rem;
+    padding: 1.25rem 5rem 5rem;
     margin-right: auto;
     margin-left: auto;
-    width: 1200px;
+    width: 90%;
 }
 
 .infor_left_menu {
@@ -15,9 +15,9 @@
 }
 
 .infor_box_infor {
-    width: 980px;
+    width: 85%;
     box-sizing: border-box;
-    margin-left: 1.6875rem;
+    margin-left: 16px;
     min-width: 0;
     background: #fff;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 13%);
@@ -28,7 +28,6 @@
     padding: 0 30px 10px;
     position: relative;
     min-height: 100%;
-   
 }
 
 .infor_top-box {
@@ -38,17 +37,18 @@
 
 .infor_top-box>h1 {
     margin: 0;
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 1.5rem;
+    line-height: 18px;
     text-transform: capitalize;
     color: #333;
 }
 
 .infor_borderbox {
-    margin-top: 0.1875rem;
-    font-size: 0.875rem;
-    line-height: 1.0625rem;
+    margin-top: 14px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 14px;
     color: #333;
     text-transform: none;
 }
@@ -76,9 +76,7 @@
     padding-bottom: 12px;
 }
 
-
-.inp .label {
-
+.infor_label {
     display: flex;
     width: 40%;
     text-align: right;
@@ -87,9 +85,7 @@
     overflow: hidden;
 }
 
-
-.label label {
-
+.infor_label>label {
     text-align: right;
     width: 100%;
     padding-right: 20px;
@@ -111,6 +107,10 @@
 
 .infor_input>span {
     display: block;
+}
+
+.infor_input input {
+    padding: 4px 8px;
 }
 
 .infor_btn {
@@ -202,7 +202,7 @@
 }
 
 .infor_btn2 input {
-    width: 22%;
+    width: 28%;
     display: inline-block;
 }
 

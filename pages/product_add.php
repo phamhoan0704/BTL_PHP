@@ -3,9 +3,9 @@
 
     $id = $_GET['id'];
     $choose = $_GET['choose'];
-     $_SESSION['user'] = "moi12345";
+    
     if(!isset($_SESSION["user"]))
-        header("location:log_in.php?action=cart");
+        header("location:log_in.php");
     else {
         
         $username=$_SESSION['user'];

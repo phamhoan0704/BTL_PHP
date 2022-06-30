@@ -9,7 +9,7 @@
         $dateStart = date('Y-m-d',$time);
     }
 
-    $sql = "SELECT tbl_product.product_id, tbl_product.product_name, tbl_product.product_price_pre, sum(tbl_order_detail.order_quantity) as 'sale_amount', tbl_product.product_price*sum(tbl_order_detail.order_quantity) as 'total'
+    $sql = "SELECT tbl_product.product_id, tbl_product.product_name, tbl_product.product_price, sum(tbl_order_detail.order_quantity) as 'sale_amount', tbl_product.product_price*sum(tbl_order_detail.order_quantity) as 'total'
             FROM tbl_product INNER JOIN tbl_order_detail on tbl_product.product_id=tbl_order_detail.product_id
                              INNER JOIN tbl_order on tbl_order.order_id=tbl_order_detail.order_id
                              WHERE tbl_order.order_date >= '$dateStart'
@@ -24,7 +24,7 @@
         {
             $product[] = $row;
         }
-    require "../../lib/Classes/PHPExcel.php";
+    require "../../lib/PHPExcel-1.8/Classes/PHPExcel.php";
 
     //Khởi tạo đối tượng
     $excel = new PHPExcel();
@@ -44,7 +44,7 @@
     //Xét in đậm cho khoảng cột
     $excel->getActiveSheet()->getStyle('A3:E3')->getFont()->setBold(true);
     //Tạo tiêu đề cho từng cột
-    
+    -
 
     $excel->getActiveSheet()->setCellValue('A3','Mã Sản Phẩm');
     $excel->getActiveSheet()->setCellValue('B3','Tên Sản Phẩm');
@@ -69,7 +69,7 @@
     $filename = "TKBC_Tu_" . $dateStart ."_Den_" .$dateEnd. ".xlsx";
     // Khởi tạo đối tượng PHPExcel_IOFactory để thực hiện ghi file
 
-    PHPExcel_IOFactory::createWriter($excel, 'Excel2007')->save('data.xlsx');
+    // PHPExcel_IOFactory::createWriter($excel, 'Excel2007')->save("../../TKDT/$filename");
     header('Content-type: application/vnd.ms-excel');
     header("Content-Disposition: attachment; filename=$filename"); 
     PHPExcel_IOFactory::createWriter($excel, 'Excel2007')->save('php://output');

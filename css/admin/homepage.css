@@ -1,11 +1,11 @@
 .order_management_content {
     display: flex;
     flex-wrap: wrap;
-    background-color: #f6f6f6;
+    background-color: rgb(236, 236, 236);
 }
 
 .homepage_main {
-    margin: 0 50px;
+    margin: 0 40px;
     flex: 1;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .to-do-item {
-    width: calc(25% - 2px);
+    width: calc(33% - 2px);
     text-align: center;
     padding: 18px 0;
     text-decoration: none;
@@ -62,7 +62,7 @@
     margin-top: -18px;
 }
 
-.to-do-item:nth-child(4n):after {
+.to-do-item:nth-child(3n):after {
     width: 0;
 }
 
@@ -87,7 +87,7 @@
 .sale-analysis {}
 
 #linechart {
-    width: 900px;
+    width: 850px;
     height: 400px;
     margin-top: 48px;
 }

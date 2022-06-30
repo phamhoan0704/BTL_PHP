@@ -29,6 +29,7 @@
 
         $index = ($current_page-1)*15;
         //Lấy bảng sp
+        
         $sql = "SELECT tbl_product.product_id, tbl_product.product_image, tbl_product.product_quantity, tbl_product.product_name, tbl_product.product_price, tbl_product.product_price_pre, (100-round((tbl_product.product_price / tbl_product.product_price_pre)*100,0)) as 'product_discount' 
                 FROM tbl_product
                 where product_name like '%$search_pdt%' 
@@ -70,5 +71,8 @@
         </ul>
     </div>
     <?php include 'footer.php'; ?>
+    <script>
+        document.getElementById("header_search").value = "<?php echo $search_pdt; ?>";
+    </script>
 </body>
 </html>

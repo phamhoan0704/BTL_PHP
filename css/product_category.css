@@ -106,6 +106,7 @@
     color: #000000;
     text-transform: uppercase;
     font-weight: 700;
+    margin-left: 16px;
 }
 
 .custom-dropdown__select {

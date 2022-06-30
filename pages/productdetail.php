@@ -23,10 +23,10 @@ else {
         $author_id = $product['author_id'];
     }
     $sql2 = "SELECT tbl_supplier.supplier_name,tbl_author.author_name 
-from tbl_supplier 
-inner join tbl_product on tbl_product.supplier_id = tbl_supplier.supplier_id
-inner join tbl_author on tbl_product.author_id =tbl_author.author_id 
-WHERE tbl_product.product_id='$id';";
+            from tbl_supplier 
+            inner join tbl_product on tbl_product.supplier_id = tbl_supplier.supplier_id
+            inner join tbl_author on tbl_product.author_id =tbl_author.author_id 
+            WHERE tbl_product.product_id='$id';";
     $query2 = mysqli_query($conn, $sql2);
     while ($result = mysqli_fetch_array($query2)) {
         $authorname = $result['author_name'];

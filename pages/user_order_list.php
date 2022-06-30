@@ -54,7 +54,7 @@ if (!isset($_SESSION['user'])) {
     }
 } ?>
 
-<div class="container">
+<div class="user_order_container">
     <div class="left_menu">
         <?php include('menuleft.php'); ?>
     </div>

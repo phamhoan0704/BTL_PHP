@@ -4,7 +4,6 @@ if (!isset($_SESSION['user'])) {
     header('Location:log_in.php');
 } else {
     $user = $_SESSION['user'];
-    echo $user;
     include '../database/connect.php';
     $sql = "select * from tbl_user where user_name='$user';";
     $pass_data = mysqli_query($conn, $sql);

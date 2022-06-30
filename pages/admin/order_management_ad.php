@@ -393,7 +393,7 @@
                 <tr>
                     <td><?php echo $value['order_id'] ?></td>
                     <td><?php echo $value['user_id']  ?></td>
-                    <td><?php echo $value['order_total'] ?></td>
+                    <td><?php echo number_format($value['order_total']); ?></td>
                     <td >Đã hủy</td>
                     <td><?php echo $value['order_date'] ?></td>
                     <td><a href="order_detail_ad.php?id=<?php echo $value["order_id"]?>">Xem chi tiết</a> </td>
@@ -407,8 +407,14 @@
 
            
        
-    </div>    </div>
+    </div>    
+    </div>
+</div>
+    <?php include 'footer_ad.php'; ?>
     <script src="../../js/home_tab.js "></script>
-
+    <script>
+        document.getElementById("header-order").style.background = "rgb(1 161 75)";
+        document.getElementById("header-order").style.color = "white";
+    </script>
 </body>
 </html>
