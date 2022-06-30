@@ -5,7 +5,7 @@ if (!isset($_SESSION['user'])) {
 } else {
     $user = $_SESSION['user'];
     echo $user;
-    include 'connect.php';
+    include '../database/connect.php';
     $sql = "select * from tbl_user where user_name='$user';";
     $pass_data = mysqli_query($conn, $sql);
     if ($pass_data) {

@@ -3,7 +3,6 @@
     session_start();
     $user_active = false;
     $total = 0;
-    $_SESSION['user'] = "luyen123";
     if(isset($_SESSION['user'])) 
     {
         $user_active=true;
@@ -114,6 +113,8 @@
     <link rel="stylesheet" href="../css/register.css">
     <link rel="stylesheet" href="../css/information.css">
     <link rel="stylesheet" href="../font/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../css/home_tab.css">
+    <link rel="stylesheet" href="../css/changepassword.css">
 </head>
 
 <body>
@@ -124,8 +125,6 @@
                     Công ty cổ phần xuất bản và truyền thông Trí Tuệ
                 </div>
                 <div class="site-topbar__user<?=$user_active?"active":""?>">
-
-
                     <a href="information.php" class="site-topbar__user-name">Xin chào : <?php echo $_SESSION['user'];?></a>
                     <span class="sep">|</span>
                     <a href="log_out.php" class="site-topbar__logout">Đăng xuất</a>
@@ -160,7 +159,7 @@
                 <a href="cart_view.php" class="site-header__cart-container">
                     <div class="site-header__cart">
                         <div class="header__cart-wrap">
-                            <i class="header__cart-icon fa fa-solid fa-cart-plus" style="font-family: "Font Awesome 6 Free"!important;"></i>
+                            <i class="header__cart-icon fa fa-solid fa-cart-plus" style="font-family:Font Awesome 6 Free !important;"></i>
                             <span class="header__cart-notice"><?php echo $total?></span>
                             <div class="header__cart-list">
                                 <div class="header__cart-list-heading">

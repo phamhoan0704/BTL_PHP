@@ -1,6 +1,6 @@
-const ipnElement=document.querySelector('#ipnPassword')
-const btnElement=document.querySelector('#btnPassword')
-const eyeElement=document.querySelector('#btnEye')
+const ipnElement=document.querySelector('#login_ipnPassword')
+const btnElement=document.querySelector('#login_btnPassword')
+const eyeElement=document.querySelector('#login_btnEye')
 
 let statusEye=false;
 

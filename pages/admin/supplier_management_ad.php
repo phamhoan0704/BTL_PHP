@@ -1,19 +1,23 @@
 <?php
-    include '../../Database/connect.php'
+include '../../Database/connect.php'
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="../../Css/admin/tab.css">
     <link rel="stylesheet" href="../../css/admin/order_management_ad.css">
 </head>
-<body> 
+
+<body>
     <?php
+
 //tat ca
         $sql_supplier="SELECT *FROM tbl_supplier";
         $query_supplier=mysqli_query($conn,$sql_supplier);
@@ -229,5 +233,7 @@
     </div>
     <script src="../../js/home_tab.js "></script>
        
+
 </body>
+
 </html>
