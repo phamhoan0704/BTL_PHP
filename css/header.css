@@ -8,9 +8,10 @@ a:hover {
     color: #01a14b;
 }
 
-html {
-    font-family: 'Open Sans', sans-serif;
+#body {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -254,13 +255,14 @@ html {
 .header__cart-item-name {
     font-size: 15px;
     font-weight: 500;
-    line-height: 18px;
+    line-height: 20px;
     padding-right: 16px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     text-align: left;
-    margin: 8px;
+    margin: 2px 0 4px;
+    overflow: hidden;
 }
 
 .header__cart-item-price {
@@ -416,7 +418,7 @@ html {
     border-bottom: 1px dashed #ccc;
 }
 
-.secondary-nav-item a {
+.secondary-nav-item-link {
     margin: 0px!important;
     padding: 12px 0 10px 10px;
     white-space: normal!important;
@@ -426,6 +428,7 @@ html {
     text-decoration: none;
     display: block;
     background-color: transparent;
+    text-transform: capitalize;
 }
 
 .secondary-nav-item:hover a {

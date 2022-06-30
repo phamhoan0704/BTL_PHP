@@ -14,13 +14,14 @@
         <div class="main_menu">
         <ul>
             <li><a href="" style="color: black;font-weight:bold;font-size:20px;"> Danh mục quản lí</a></li>
+            <li><a href="../admin/homepage.php">Trang Chủ</a></li>
             <li><a href="../admin/category_management_ad.php">Quản lí danh mục</a></li>
             <li><a href="../admin/product_management_ad.php">Quản lí sản phẩm</a></li>
             <li><a href="../admin/author_management_ad.php">Quản lí tác giả</a></li>
             <li><a href="../admin/supplier_management_ad.php">Quản lí nhà cung cấp</a></li>
             <li><a href="../admin/user_management_ad.php">Quản lí tài khoản</a></li>
             <li><a href="../admin/order_management_ad.php">Quản lí đơn hàng</a></li>
-            <li><a href="">Quản lí doanh thu</a></li>
+            <li><a href="sale_management.php">Quản lí doanh thu</a></li>
             <li><a href="">Quản lí bài viết</a></li>
         </ul>
         </div>

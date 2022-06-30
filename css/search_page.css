@@ -12,7 +12,9 @@
     line-height: 30px;
 }
 
-.search-container span {
+.search-container>span {
     display: block;
     margin-bottom: 30px;
+    margin: 0 0 30px 16px;
+    font-size: 16px;
 }

@@ -3,7 +3,7 @@
     session_start();
     $user_active = false;
     $total = 0;
-    $_SESSION['user'] = "luyen123";
+    // $_SESSION['user'] = "luyen123";
     if(isset($_SESSION['user'])) 
     {
         $user_active=true;
@@ -93,6 +93,8 @@
     <!-- CSS Footer -->
     <link rel="stylesheet" href="../css/footer.css">
 
+    <link rel="stylesheet" href="../css/search_page.css">
+
     <!-- <link rel="stylesheet" href="../font/fontawesome-free-6.1.1-web/css/all.css"> -->
 
     <link rel="stylesheet" href="../css/cart_style.css">
@@ -117,6 +119,7 @@
 </head>
 
 <body>
+<div id="body" style="font-family: 'Open Sans', sans-serif!important;box-sizing: border-box;margin: 0; padding: 0;">
     <div id="header">
         <div class="site-topbar">
             <div class="site-topbar__container">
@@ -186,27 +189,6 @@
                                         }
                                     ?>
                                     
-
-                                    <!-- <li class="header__cart-item">
-                                        <a href="" class="header__cart-item-link">
-                                            <div class="header__cart-img-block">
-                                                <img src="./assets/img/product/product02.jpg" alt="" class="header__cart-img">
-                                            </div>
-                                            <h5 class="header__cart-item-name">Chú thuật hồi chiến - Tập 2</h5>
-                                            <span class="header__cart-item-price">50,000đ</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="header__cart-item">
-                                        <a href="" class="header__cart-item-link">
-                                            <div class="header__cart-img-block">
-                                                <img src="./assets/img/product/product01.jpg" alt="" class="header__cart-img">
-                                            </div>
-                                            <h5 class="header__cart-item-name">Thám tử lừng danh Conan</h5>
-                                            <span class="header__cart-item-price">50,000đ</span>
-                                        </a>
-                                    </li> -->
-
                                 </ul>
                                 <div class="text-mini-cart">
                                     <span class="text-left">Tổng tiền</span>
@@ -249,7 +231,7 @@
                     <ul class="header__secondary-nav">
                         <?php
                             for($i=0;$i<count($data1);$i++) {
-                                echo '<li class="secondary-nav-item"><a href="product_category.php?id='.$data1[$i]['category_id'].'">'.$data1[$i]['category_name'].'</a></li>';
+                                echo '<li class="secondary-nav-item"><a class="secondary-nav-item-link" href="product_category.php?id='.$data1[$i]['category_id'].'">'.$data1[$i]['category_name'].'</a></li>';
                             }
                         ?>
                     </ul>
