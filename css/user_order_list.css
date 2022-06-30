@@ -37,12 +37,16 @@
 }
 
 #tb1 {
+    width: 95%;
+    margin: auto;
     border-spacing: 0;
 }
 
 #tb1 th {
     padding: 20px;
-    border-bottom: 0.6px #050505 solid;
+    border-top: 2px  #009234 solid;
+     text-align: left;
+     background-color: rgb(217 218 214 / 49%);
 }
 
 tr {
@@ -57,8 +61,8 @@ tr {
 }
 
 #tb1 td {
-    text-align: center;
-    padding: 10px;
+    padding: 10px 25px 10px;
+    text-align: left;
     height: 60px;
     border-bottom: 0.6px #e0d8d8 solid;
 }
@@ -68,7 +72,18 @@ tr {
     padding: 5px;
     background-color: #009234;
 }
-
+.btnhuy{
+    border-radius: 2px;
+    border:none; 
+    color: rgb(243, 19, 19);
+    padding:5px 8px;
+    background: none;
+   
+}
+.btnhuy:hover{
+    color:#050505;
+    background:rgb(243, 19, 19); ;
+}
 .icon_order img {
     width: 50px;
     height: 50px;
