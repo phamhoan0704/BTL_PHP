@@ -2,6 +2,7 @@
 include('./header.php');
 $iName = $iPass = $loginErr = "";
     $nameErr = $passErr = $passmd5="";
+    $list=[];
 //Lưu ý: empty và isset sẽ trả về TRUE nếu biến không tồn tại 
 if (isset($_POST['submit_btn'])) {
     
@@ -43,25 +44,36 @@ if (isset($_POST['submit_btn'])) {
     $sql = "select *from tbl_user where user_name='$iName' and user_password='$passmd5' ";
     $query = mysqli_query($conn, $sql);
     $num_rows = mysqli_num_rows($query);
+    while($row=mysqli_fetch_assoc($query)){
+        $list[]=$row;
+
+    }
     if ($num_rows == 0) {
         $loginErr = "Tên đăng nhập hoặc mật khẩu không đúng";
     } else {
         //Lưu tên đăng nhập và mật khẩu vào session để tiện xử lý sau này
        $_SESSION['user']=$iName;
 
-       
-        //thực thi hành động sua khi lưu thông tin
+           //thực thi hành động sua khi lưu thông tin
         //=> chuyển hướng trang web tới một tragn index.php
         // if($_GET['action']=='cart'){
         //     echo "<script>window.location.href='./cart_view.php'</script>";
         // }
         // else
+       foreach($list as $item):
+        if($item['user_type']==2)
        echo "<script>window.location.href='./home.php'</script>";
+      else
+       echo "<script>window.location.href='../pages/admin/home_ad.php'</script>";
+       endforeach;
+       
+
     }
 }
 
 
 ?>
+
 
     <div class="login_container">
         <div class="login_wapper">
