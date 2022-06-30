@@ -5,7 +5,7 @@
     margin-top: 100px;
 }
 
-h1 {
+.cart_container h1 {
     font-weight: bold;
     color: #000000;
     line-height: 36px;
@@ -162,7 +162,7 @@ h1 {
     margin-right: 20px;
 }
 
-.payment {
+/* .payment {
     display: inline-block;
     text-decoration: none;
     color: white;
@@ -170,7 +170,7 @@ h1 {
     font-family: 'Open Sans', sans-serif;
     line-height: 40px;
     width: 100%;
-}
+} */
 
 .cart_return {
     width: 30%;

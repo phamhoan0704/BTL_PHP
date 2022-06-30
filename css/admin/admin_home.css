@@ -4,20 +4,23 @@
     box-sizing: border-box;
 }
 h1{
-    color: white;
-    line-height: 100px;
-
+    color: rgb(1 161 75);
+    line-height: 150px;
+   
 }
 .header{
     width: 100%;
-    height: 100px;
-    background-color: rgb(1 161 75);
+    height: 150px;
+    /* background-color: rgb(1 161 75); */
+    background-color: rgb(215, 229, 230);
+    border-bottom: 2px solid rgb(1 161 75);
     margin-bottom: 50px;
 }
 
 .main_menu{
     width: 300px;
-    background-color: rgb(1 161 75);
+    /* background-color: rgb(1 161 75); */
+    background-color: white;
     height: 600px;
 }
 
@@ -39,6 +42,9 @@ h1{
     line-height: 50px;
     text-decoration: none;
     text-transform: uppercase;
-    color: white;
+    color: black;
     padding-left: 20px;
+}
+.main_menu>ul>li:hover {
+    background-color: rgb(1 161 75);
 }

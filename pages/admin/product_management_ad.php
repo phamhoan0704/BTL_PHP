@@ -40,6 +40,7 @@ include '../../database/connect.php'
     }
     ?>
     <div class="order_management_content">
+
         <?php include 'home_ad.php' ?>
         <form method="POST" action="product_add_ad.php">
             <div class="order_management_main">
@@ -84,6 +85,7 @@ include '../../database/connect.php'
                                         </td>
                                     </tr>
                                 <?php endforeach ?>
+
 
                             </table>
                         </div>

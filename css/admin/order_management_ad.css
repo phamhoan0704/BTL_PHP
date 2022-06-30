@@ -20,14 +20,17 @@ table{
     border-spacing: 0;
     font-size:14px ;
     font-family: 'Open Sans', sans-serif;
-    
+    margin-bottom: 15px;
+ 
+  
 }
 table tr{
     height: 70px;
     background-color:white;
+    
 }
 table td{
-    padding: 5px;
+    padding: 25px;
 
 }
 .title_order td{
@@ -40,11 +43,34 @@ table td{
 table a{
     display: block;
     text-decoration: none;
-    color: #131313;    
+    color: #131313;   
     font-weight: bold;
 }
 button{
     background-color:rgb(1 161 75) ;
     padding: 7px;
     cursor: pointer;
+}
+.order_management_content #input_search{
+    width: 300px;
+    height: 30px;
+    margin-right: 20px;
+}
+.label_search{
+    margin-right: 30px;
+}
+.title_order1{
+    width: 150px;
+}
+.title_order2{
+    width: 160px;
+}
+.title_order3{
+    width: 120px;
+}
+.title_order4{
+    width: 200px;
+}
+.title_order5{
+    width: 140px;
 }
