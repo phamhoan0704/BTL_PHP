@@ -94,7 +94,7 @@ if(isset($_POST['add'])){
                 <tr>
                     <td>Kiểu tài khoản:</td>
                     <td>
-                    <select name="type">
+                    <select name="type" class="account_style">
                         <option value="1">Admin</option>
                         <option value="2">Khách hàng</option>
                     </select>

@@ -20,6 +20,7 @@ table{
     border-spacing: 0;
     font-size:14px ;
     font-family: 'Open Sans', sans-serif;
+
     
 }
 table tr{
@@ -27,7 +28,7 @@ table tr{
     background-color:white;
 }
 table td{
-    padding: 5px;
+    padding: 25px;
 
 }
 .title_order td{

@@ -42,7 +42,14 @@ $user = $_SESSION["user"];
 $id_user_query = mysqli_query($conn, "SELECT user_id FROM tbl_user WHERE user_name='$user'");
 $user_row = mysqli_fetch_array($id_user_query);
 $id_user = $user_row['user_id'];
-if (isset($_POST['name'])) {
+
+
+$name="";
+$email="";
+$phone="";
+$addess="";
+$err_order;
+if (isset($_POST['btn_order'])) {
     $status = 1;
     $date = date("Y/m/d");
     $phone = $_POST["phone"];
@@ -60,6 +67,21 @@ if (isset($_POST['name'])) {
         } else
             $payment_method = 2;
     }
+
+
+    $pattern_phone='/(((\+|)84)|0)(3|5|7|8|9)+([0-9]{8})\b/';
+    if (!preg_match($pattern_phone, $phone)){
+            $err_phone = "Sai số điện thoại";
+    } 
+
+    $pattern_email='/^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/';
+    if(!preg_match($pattern_email, $email)){
+        $err_email="Sai email";
+    }
+    if($name==""||$phone==""||$email==""||$addess==""||!empty($err_phone)){
+        $err_order=1;
+    }  
+    if($err_order==0){
 
     $query = mysqli_query($conn, "INSERT INTO tbl_order(user_id,order_name,order_phone,order_email,order_address,
     order_date,order_status,order_total,order_delivery,order_note,order_payment,order_payment_status)
@@ -91,6 +113,7 @@ if (isset($_POST['name'])) {
         echo mysqli_error($conn);
     }
 }
+}
 
 ?>
 
@@ -104,16 +127,45 @@ if (isset($_POST['name'])) {
                     <h1>Thông tin giao hàng</h1>
 
                     <div class="order_name">
-                        <input type="text" placeholder="Họ và tên" name="name">
+                        <input type="text" placeholder="Họ và tên" name="name" value="<?php echo $name ?>">
+                        <?php if(isset($_POST['btn_order'])&& empty($_POST['name'])){ ?>
+                            <p style="color: red;"> Vui lòng nhập họ tên người nhận</p>
+                        <?php }?>
                     </div>
                     <div class="order_email">
-                        <input type="text" placeholder="Email" name="email">
+                        <input type="text" placeholder="Email" name="email" value="<?php echo $email ?>">
+                        <?php if(isset($_POST['btn_order'])){
+                        if(empty($_POST['email'])){?>
+                         <p style="color: red;"> Vui lòng nhập email</p>
+                         <?php }
+                         else{
+                            if(!empty($err_email)){?>
+                                 <p style="color: red;"><?php echo $err_email ?></p>
+                                <?php $err_order=1;
+                            }   
+                         }
+                        }?>
                     </div>
                     <div class="order_phone">
-                        <input type="text" placeholder="Số điện thoại" name="phone">
+                        <input type="text" placeholder="Số điện thoại" name="phone" value="<?php echo $phone ?>">
+                        <?php if(isset($_POST['btn_order'])){
+                            if(empty($_POST['phone'])){?>
+                         <p style="color: red;"> Vui lòng nhập số điện thoại</p>
+                         <?php }
+                         else{
+                            if(!empty($err_phone)){?>
+                                 <p style="color: red;"><?php echo $err_phone  ?></p>
+                                <?php  $err_order=1;
+                            }                             
+                         }
+                        }?>
+
                     </div>
                     <div class="order_address">
-                        <input type="text" placeholder="Địa chỉ" name="address">
+                        <input type="text" placeholder="Địa chỉ" name="address" value="<?php echo $addess ?>">
+                        <?php if(isset($_POST['btn_order'])&&empty($_POST['address'])){?>
+                         <p style="color: red;"> Vui lòng nhập địa chỉ</p>
+                        <?php }?>
                     </div>
                     <!-- <div class="frm_province order_frm">
                   <label for="" class="label_add_detail">Tỉnh / Thành</label>
@@ -161,7 +213,7 @@ if (isset($_POST['name'])) {
                         </div>
 
                         <div class="payment">
-                            <input type="radio" id="payment_receive" name="payment" value="2">
+                            <input type="radio" id="payment_receive" name="payment" value="2" checked>
                             <label for="payment_receive" onclick="hidden_show()">
                                 <img src="../img/icon/cash-on-delivery .png" alt="">
                                 <p>Thanh toán khi nhận hàng</p>
@@ -191,11 +243,10 @@ if (isset($_POST['name'])) {
                                     <td><a href="" class="order_pdt_img"><img src="../img/product/<?php echo $value['product_image'] ?>" alt=""></a></td>
                                     <td><a href=""><?php echo $value['product_name'] ?></a> </td>
                                     <td><?php echo $value['product_amount'] ?></td>
-                                    <td><?php echo $value['product_price'] ?></td>
+                                    <td style="width:50px"><?php echo number_format($value['product_price'])."đ"?></td>
                                 </tr>
                             <?php endforeach ?>
                         </table>
-
                     </div>
                 </div>
                 <div class="order_total">
@@ -203,15 +254,15 @@ if (isset($_POST['name'])) {
                     <table>
                         <tr>
                             <td class="order_total_title">Tổng tiền sản phẩm</td>
-                            <td class="order_money"><?php echo total($cart) ?></td>
+                            <td class="order_money"><?php echo number_format(total($cart))."đ" ?></td>
                         </tr>
                         <tr>
                             <td class="order_total_title">Phí vận chuyển</td>
-                            <td class="order_money"><?php echo delivery_fee(total($cart)) ?></td>
+                            <td class="order_money"><?php echo number_format(delivery_fee(total($cart)))."đ"?></td>
                         </tr>
                         <tr>
                             <td class="order_total_title" style="font-weight: 600;">Tổng cộng</td>
-                            <td class="order_money" style="font-weight:600;font-size: 16px;"><?php echo total($cart) + delivery_fee(total($cart))  ?></td>
+                            <td class="order_money" style="font-weight:700;font-size: 16px;"><?php echo number_format(total($cart) + delivery_fee(total($cart)))."đ"  ?></td>
                         </tr>
                     </table>
                 </div>

@@ -50,31 +50,38 @@
        <table class="table_user">
                  <tr><td style="font-size: 16px;font-weight:bold">Thông tin đơn hàng </td> </tr>
                  <tr>
-                    <td class="">Mã đơn hàng: <?php echo $order['order_id'] ?>
+                    <td class="" style="width:200px">Mã đơn hàng: 
+                    </td>
+                    <td><?php echo $order['order_id'] ?>
                     </td>
                 </tr>
                 <tr>
-                    <td class="">Họ tên: <?php echo $order['order_name'] ?>
+                    <td class=""  style="width:200px">Họ tên: </td>
+                    <td><?php echo $order['order_name'] ?></td>
+                </tr>
+                <tr>
+                    <td class="" style="width:200px">Email: </td>
+                        <td><?php echo $order['order_email']?>
                     </td>
                 </tr>
                 <tr>
-                    <td class="">Email: <?php echo $order['order_email']?>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="">Số điện thoại: <?php echo $order['order_phone'] ?>
+                    <td class=""  style="width:200px">Số điện thoại: </td>
+                        <td><?php echo $order['order_phone'] ?>
                    </td>
                 </tr>
                 <tr>
-                    <td class="">Địa chỉ: <?php echo $order['order_address']?>
+                    <td class="" style="width:200px">Địa chỉ: </td>
+                    <td><?php echo $order['order_address']?>
                    </td>
                 </tr>
                 <tr>
-                    <td>Ghi chú: <?php echo $order['order_note'] ?></td>
+                    <td style="width:200px"> Ghi chú: </td>
+                    <td><?php echo $order['order_note'] ?></td>
                 </tr>
 
                 <tr>
-                    <td class="">Trạng thái đơn hàng: <?php
+                    <td class=""  style="width:200px">Trạng thái đơn hàng:</td>
+                    <td> <?php
                             if($order['order_status']==1){?>
                                 Đặt hàng<?php }?>
                             <?php if($order['order_status']==2){  ?>
@@ -87,11 +94,15 @@
                             <?php if($order['order_status']==4){  ?>
                                 Giao hàng thành công
                             <?php }?>
+                            <?php if($order['order_status']==5){  ?>
+                               Đã hủy
+                            <?php }?>
                    </td>
 
                 </tr>
                 <tr>
-                    <td class="">Hình thức thanh toán: <?php
+                    <td class=""  style="width:200px">Hình thức thanh toán:</td>
+                    <td> <?php
                             if($order['order_payment']==1){?>
                             Thanh toán qua tài khoản
                                 <?php }?>
@@ -102,7 +113,8 @@
 
                 </tr>
                 <tr>
-                    <td class="">Trạng thái thanh toán: <?php
+                    <td class="" style="width:200px">Trạng thái thanh toán:</td>
+                    <td> <?php
                             if($order['order_payment_status']==1){?>
                             Chưa thanh toán
                                 <?php }?>
@@ -125,7 +137,7 @@
            <?php foreach($order_dt as $value):?>
            <tr>
                <td><?php echo $value['product_id'] ?></td>
-               <td><?php echo $value['product_name']?></td>
+               <td style="width:500px"><?php echo $value['product_name']?></td>
                <td><img src="../../img/product/<?php echo $value['product_image'] ?>" alt=""> </td>
                <td><?php echo $value['order_quantity'] ?></td>
                <td><?php echo $value['order_price']  ?></td>
@@ -134,18 +146,20 @@
 
        </table>
             <form method="POST" class="order_status_update">
+                <?php if($order['order_status']==1||$order['order_status']==2||$order['order_status']==3||$order['order_status']==4) { ?>
                 <div style="width:600px">
-                <div>
-                    <label for="">Trạng thái đơn hàng: </label>
-                </div>
-                    
+                    <div>
+                        <label for="">Trạng thái đơn hàng: </label>
+                    </div>
                     <select name="status">
                         <option value="1" <?php if($order['order_status']==1) echo "selected=\"selected\"" ?>>Đặt hàng</option>
                         <option value="2" <?php if($order['order_status']==2) echo "selected=\"selected\"" ?>>Đang chuẩn bị hàng</option>
                         <option value="3"<?php if($order['order_status']==3) echo "selected=\"selected\"" ?>>Đơn hàng đang được vận chuyển</option>
                         <option value="4"<?php if($order['order_status']==4) echo "selected=\"selected\"" ?>>Giao hàng thành công</option> 
+                    
                     </select>
                 </div>
+                <?php }?>
 
                 <div>
                 <div style="width: 200px;">
