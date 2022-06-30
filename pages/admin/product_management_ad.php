@@ -48,7 +48,7 @@
             <?php foreach($product as $value):?>
             <tr>
                 <td><?php echo $value['product_id'] ?></td>
-                <td style="width:300px;"><?php echo $value['product_name']  ?></td>
+                <td style="width:250px;"><?php echo $value['product_name']  ?></td>
                 <td><img src="../../img/product/<?php echo $value['product_image']?>" alt="">   </td>
                 <td><?php echo $value['product_quantity'] ?></td>
                 <td><?php echo $value['category_id'] ?></td>

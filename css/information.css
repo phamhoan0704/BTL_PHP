@@ -76,7 +76,7 @@
     justify-content: center;
 }
 
-.label {
+.inp .label {
     display: flex;
     width: 40%;
     text-align: right;
@@ -85,7 +85,7 @@
     overflow: hidden;
 }
 
-label {
+.label label {
     text-align: right;
     width: 100%;
     padding-right: 20px;
