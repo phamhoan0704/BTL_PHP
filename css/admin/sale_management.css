@@ -1,0 +1,78 @@
+.sale_management_content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sale_management_main {
+    flex: 1;
+    margin: 0 50px;
+}
+
+.sale_management_main h1 {
+    margin-bottom: 24px;
+    color: black;
+    text-align: center;
+    line-height: 2em;
+    margin-top: -12px;
+}
+
+.sale_management-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.sale_management-filter button {
+    padding: 4px 16px;
+    border: 1px solid black;
+}
+
+.sale_management-filter input {
+    margin: 0 24px 0 8px;
+}
+
+.sale_management__select {
+    border: 1px solid #01a14b;
+    border-radius: 30px;
+    padding: 4px 8px;
+}
+
+.sale_management-table,
+.sale_management-table tr,
+.sale_management-table td {
+    border: 1px solid green;
+    border-collapse: collapse;
+}
+
+.sale_management-table {
+    width: 100%;
+    margin-bottom: 48px;
+}
+
+.sale_management-table thead td {
+    font-weight: bold;
+    text-align: center;
+}
+
+.sale_management-table tr {
+    background-color: inherit;
+}
+
+.sale_management-table td {
+    padding: 6px 8px;
+}
+
+.float-right {
+    float: right;
+}
+
+.btn.btn-success {
+    text-decoration: none;
+    background-color: green;
+    display: block;
+    padding: 4px 8px;
+    margin-bottom: 12px;
+    color: #fff;
+}

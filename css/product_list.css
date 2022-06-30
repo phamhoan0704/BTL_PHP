@@ -200,9 +200,8 @@ html {
     width: 40px;
     left: 30px;
     margin-bottom: 10px;
-    /* display: none; */
-    /* position: relative; */
     text-align: center;
+    cursor: pointer;
 }
 
 .pdt_icon a i {
