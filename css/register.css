@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     border-radius: 20px;
+    margin-top: 60px;
 }
 
 .register_wapper {
@@ -119,10 +120,9 @@
 
 .register_submit_btn {
     margin-bottom: 20px;
-   
 }
 
-.register_submit_btn >button {
+.register_submit_btn>button {
     text-align: center;
     font-size: 16px;
     color: #fff;

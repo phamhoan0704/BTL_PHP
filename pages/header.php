@@ -3,8 +3,10 @@
     session_start();
     $user_active = false;
     $total = 0;
+    // $_SESSION['user'] = 'moi12345';
     if(isset($_SESSION['user'])) 
     {
+        // echo $_SESSION['user'];
         $user_active=true;
         $user_name = $_SESSION['user'];
         // Lây dữ liệu product ở cart
@@ -151,7 +153,7 @@
                 <div class="site-header__search-wrap">
                     <form action="search_page.php" method="get">
                         <div class="header__search">
-                            <input type="text" class="header__search-input" placeholder="Tìm kiếm" name="search_pdt">
+                            <input type="text" class="header__search-input" placeholder="Tìm kiếm" name="search_pdt" id="header_search">
                             <button type="submit" class="header__search-btn">
                                 <svg class="header__search-icon" height="64px" id="SVGRoot" version="1.1" viewBox="0 0 64 64" width="56px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs3848"/><g id="layer1"><g id="g5183" style="stroke:white" transform="translate(25.5,-27)"><circle class="fil0 str1" cx="0.73810571" cy="53.392174" id="circle15" r="20.063322" style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:white;stroke-width:2.00005412;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"/><line class="fil0 str2" id="line25" style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke: white;stroke-width:3.99974346;stroke-linecap:round;stroke-linejoin:round;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" x1="15.617603" x2="30.305107" y1="68.559662" y2="83.151169"/><path class="fil0 str0" d="m -12.701441,53.392174 c 0,-7.391751 6.047795,-13.439547 13.43954602,-13.439547" id="path281" style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:white;stroke-width:2.00005412;stroke-linecap:round;stroke-linejoin:round;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"/></g></g></svg>
                                 <!-- <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i> -->

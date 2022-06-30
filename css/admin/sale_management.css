@@ -1,11 +1,17 @@
 .sale_management_content {
     display: flex;
     flex-wrap: wrap;
+    background-color: rgb(236, 236, 236);
 }
 
 .sale_management_main {
+    margin: 0 40px;
     flex: 1;
-    margin: 0 50px;
+    background-color: white;
+    padding: 24px 48px;
+    -webkit-box-shadow: 0 1px 4px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 1px 4px 0 rgb(0 0 0 / 10%);
+    margin-bottom: 24px;
 }
 
 .sale_management_main h1 {

@@ -1,5 +1,5 @@
 <?php
-include('./header.php');
+
 $iName = $iPass = $loginErr = "";
     $nameErr = $passErr = $passmd5="";
 //Lưu ý: empty và isset sẽ trả về TRUE nếu biến không tồn tại 
@@ -37,7 +37,8 @@ if (isset($_POST['submit_btn'])) {
             $passmd5=md5($iPass);
     }
     //Kết nối đến csdl
-    include '../database/connect.php';
+    include '../../database/connect.php';
+    
     //câu lệnh sql
     
     $sql = "select *from tbl_user where user_name='$iName' and user_password='$passmd5' ";
@@ -63,15 +64,26 @@ if (isset($_POST['submit_btn'])) {
         if($item['user_type']==2)
        echo "<script>window.location.href='./home.php'</script>";
       else
-       echo "<script>window.location.href='../pages/admin/home_ad.php'</script>";
+       echo "<script>window.location.href='./homepage.php'</script>";
        endforeach;
-    }
-}
-
-
+    }}
 ?>
-
-    <div class="login_container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/log_in.css">
+    <link rel="stylesheet" href="../../css/admin/log_in_ad.css">
+</head>
+<body>
+<div class="header">
+            <img src="../../img/icon/logo.jpg" alt="" style="margin: 0 50px">
+            <h1>NHÀ SÁCH TRÍ TUỆ</h1>
+        </div> 
+<div class="login_container">
         <div class="login_wapper">
             <div class="login_tittle">
                 <h2>Đăng nhập<h2>
@@ -135,4 +147,7 @@ if (isset($_POST['submit_btn'])) {
 
     <script src="../js/log_in.js"></script>
 
-<?php include('./footer.php');
+<?php include 'footer_ad.php';?>
+    
+</body>
+</html>

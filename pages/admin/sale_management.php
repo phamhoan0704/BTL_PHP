@@ -152,6 +152,7 @@
         </div>  
     </div>
 
+    <?php include 'footer_ad.php'; ?>
 
     <script>
         function dropdownOption(i, start, end)
@@ -160,6 +161,10 @@
             var url = "sale_management.php?dateStart=" + start + "&dateEnd=" + end + "&sort_by=" + i;
             window.location.href = url;
         }
+    </script>
+    <script>
+        document.getElementById("header-report").style.background = "rgb(1 161 75)";
+        document.getElementById("header-report").style.color = "white";
     </script>
 </body>
 </html>
