@@ -159,17 +159,17 @@
                         <td><a href=""class="order_pdt_img"><img src="../img/product/<?php echo $value['product_image'] ?>" alt=""></a></td>
                         <td><a href=""><?php echo $value['product_name'] ?> </a>  </td>
                         <td><?php echo $value['order_quantity'] ?></td>
-                        <td><p><?php echo $value['order_price'] ?></p></td>
+                        <td><p><?php echo number_format($value['order_price'])."đ"?></p></td>
                     </tr>
 
                     <?php endforeach ?>
                     <tr>
                         <td colspan="3">Phí vận chuyển</td>
-                        <td><p><?php echo $order_result['order_delivery']?></p> </td>
+                        <td><p><?php echo number_format($order_result['order_delivery'])."đ"?></p> </td>
                     </tr>
                     <tr>
-                        <td colspan="3">Tổng cộng</td>
-                        <td><p><?php echo $order_result['order_total']  ?></p> </td>
+                        <td colspan="3" >Tổng cộng</td>
+                        <td><p style="font-weight:700;font-size: 16px;"><?php echo number_format($order_result['order_total'])."đ"  ?></p> </td>
                     </tr>
                 </table>
             </div>

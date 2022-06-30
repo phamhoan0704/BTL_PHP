@@ -8,15 +8,15 @@
     justify-content: space-between;
 }
 
-h1 {
+.order_detail_container h1 {
     color: #333333;
     font-family: 'Open Sans', sans-serif;
     padding-bottom: 20px;
     font-size: 16px;
 }
 
-p,
-td {
+.order_detail_container p,
+.order_detail_container td {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
 }
@@ -25,7 +25,7 @@ td {
 /*--------------------------------Order stutus*/
 
 
-/* .order_status{
+ .order_status{
     width: 480px;
 }
 .order_status table{
@@ -34,6 +34,7 @@ td {
     margin-bottom: 50px;
     padding: 15px;
     width: 100%;
+    border-collapse:separate;
 }
 .order_stutus_detail{
     display: flex;
@@ -44,8 +45,10 @@ td {
 }
 .order_stutus_detail p{
     line-height: 30px;
-}  */
-
+}  
+.order_status table td{
+    height: 50px;
+}
 
 /*----------------------------------Order_detail_customer*/
 
@@ -59,12 +62,17 @@ td {
     width: 100%;
     margin-bottom: 50px;
     padding: 15px;
+    border-collapse:separate;
 }
 
 .order_detail_customer p {
     line-height: 30px;
+    margin: 0;
 }
-
+.order_detail_customer td {
+    padding: 6px 12px;
+    height: 50px;
+}
 
 /*---------------------------------Order Product*/
 
@@ -81,28 +89,28 @@ td {
 .order_list_pdt table {
     width: 100%;
     border-top: 1px solid #ccc;
+    
 }
 
-.order_list_pdt table td {
+.order_detail_container .order_pdt .order_list_pdt table td {
     padding: 10px;
     border-bottom: 1px solid #ccc;
 }
 
-.order_list_pdt table td a {
+.order_detail_container .order_list_pdt table td a {
     display: block;
     text-decoration: none;
     color: #131313;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
 }
 
-.order_pdt_img {
+.order_detail_container .order_pdt_img {
     border: 1px solid #ccc;
     width: 50px;
 }
 
-.order_list_pdt table td img {
+.order_detail_container .order_list_pdt table td img {
     width: 80%;
     display: block;
     margin: auto;
@@ -110,7 +118,7 @@ td {
     padding-bottom: 5px;
 }
 
-.order_list_pdt p {
+.order_detail_container .order_list_pdt p {
     text-align: right;
 }
 
@@ -147,6 +155,3 @@ td {
     display: inline-block;
 }
 
-.order_detail_customer td p {
-    padding: 6px 12px;
-}

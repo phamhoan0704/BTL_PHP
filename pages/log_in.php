@@ -74,7 +74,7 @@ if (isset($_POST['submit_btn'])) {
                         <div class="login_icon">
                             <i class="login_fa-regular fa fa-user"></i>
                         </div>
-                        <div id="user">
+                        <div id="login_user">
                             <input type="text" value="" name="ipnName" placeholder="Tên đăng nhập" autofocus>
                         </div>
                     </div>
@@ -86,12 +86,12 @@ if (isset($_POST['submit_btn'])) {
                         <div class="login_icon">
                             <i class="login_fa-solid fa fa-lock"></i>
                         </div>
-                        <div id="pass">
-                            <input type="password" id="ipnPassword" placeholder="Mật khẩu" name="ipnPass">
+                        <div id="login_pass">
+                            <input type="password" id="login_ipnPassword" placeholder="Mật khẩu" name="ipnPass">
                         </div>
-                        <div id="showpass">
-                            <button id="btnPassword" type="button">
-                                <i class="login_fa-regular fa fa-eye" id="btnEye"></i>
+                        <div id="login_showpass">
+                            <button id="login_btnPassword" type="button">
+                                <i class="login_fa-regular fa fa-eye" id="login_btnEye"></i>
 
                             </button>
 
@@ -117,7 +117,7 @@ if (isset($_POST['submit_btn'])) {
                 </div>
                 <div>
 
-                <span >Bạn đã có tài khoản chưa? Đăng ký <a href="../includes/register.html">Tại đây</a></span>
+                <span >Bạn đã có tài khoản chưa? Đăng ký <a href="register.php">Tại đây</a></span>
                 </div>
                 </div>
 

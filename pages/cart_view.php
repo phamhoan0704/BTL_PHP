@@ -110,7 +110,7 @@ include 'header.php';
                 <div class="cart_name"></div>
                 <div class="cart_qty"><p>Tổng cộng</p></div>
              
-                <div class="cart_price"><p><?php echo total($cart) ?> </p></div>
+                <div class="cart_price"><p><?php echo number_format(total($cart))."đ" ?> </p></div>
             </div>
         
 

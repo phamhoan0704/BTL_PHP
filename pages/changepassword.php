@@ -1,40 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/changepassword.css">
-    <link rel="stylesheet" href="../Font/fontawesome/css/all.min.css">
-    
-</head>
-
-<body>
-    <div class="container">
-        <div class="left_menu">
+    <div class="changepass_container">
+        <div class="changepass_left_menu">
             <?php include 'menuleft.php' ?>
         </div>
-        <div class="box_infor">
-            <div class="box_inforx">
-                <div class="top-box">
+        <div class="changepass_box_infor">
+            <div class="changepass_box_inforx">
+                <div class="changepass_top-box">
                     <h1>Đổi mật khẩu<h1>
-                            <div class="borderbox">
+                            <div class="changepass_borderbox">
                                 Để bảo mật tài khoản, vui lòng không chia sẻ mật khẩu cho người khác
                             </div>
                 </div>
-                <div class="mainbox">
-                    <div class="leftboxinfor">
+                <div class="changepass_mainbox">
+                    <div class="changepass_leftboxinfor">
                         <form action="" method="post">
-                            <div class="box">
-                                <div class="inp">
-                                    <div class="label">
+                            <div class="changepass_box">
+                                <div class="changepass_inp">
+                                    <div class="changepass_label">
                                         <label for="">Mật khẩu hiện tại</label>
                                     </div>
-                                    <div class="inpuif">
+                                    <div class="changepass_inpuif">
                                         <input type="password" name="pass">
-                                        <div class="btn">
+                                        <div class="changepass_btn">
                                             <span>
                                                 <?php echo $passErr; ?>
                                             </span>
@@ -42,14 +29,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="box">
-                                <div class="inp">
-                                    <div class="label">
+                            <div class="changepass_box">
+                                <div class="changepass_inp">
+                                    <div class="changepass_label">
                                         <label for="">Mật khẩu mới</label>
                                     </div>
-                                    <div class="inpuif">
+                                    <div class="changepass_inpuif">
                                         <input type="password" name="newpass" value="">
-                                        <div class="btn">
+                                        <div class="changepass_btn">
                                             <span>
                                                 <?php echo $newPassErr; ?>
                                             </span>
@@ -57,15 +44,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="box">
-                                <div class="inp">
-                                    <div class="label">
+                            <div class="changepass_box">
+                                <div class="changepass_inp">
+                                    <div class="changepass_label">
                                         <label for="">Xác nhận lại mật khẩu</label>
                                     </div>
-                                    <div class="inpuif">
+                                    <div class="changepass_inpuif">
                                         <input type="password" name="newpassconfirm">
 
-                                        <div class="btn">
+                                        <div class="changepass_btn">
                                             <span>
                                                 <?php echo $newPassConfirmErr; ?>
                                             </span>
@@ -73,10 +60,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="box">
-                                <div class="inp boxbtn">
-                                    <div class="label"></div>
-                                    <div class="btnsave">
+                            <div class="changepass_box">
+                                <div class="changepass_inp boxbtn">
+                                    <div class="changepass_label"></div>
+                                    <div class="changepass_btnsave">
                                         <button name="btnsubmit">Xác nhận</button>
                                     </div>
                                 </div>
@@ -88,5 +75,3 @@
         </div>
     </div>
     </div>
-
-</body>

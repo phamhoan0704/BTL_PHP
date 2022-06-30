@@ -1,21 +1,21 @@
-.container-information {
+.infor_container {
     position: relative;
     display: flex;
-    padding: 1.25rem 0 3.15rem;
+    padding: 1.25rem 5rem 24rem;
     margin-right: auto;
     margin-left: auto;
     width: 1200px;
 }
 
-.left_menu {
+.infor_left_menu {
     padding-left: 5px;
     display: block;
     width: 180px;
     flex-shrink: 0;
 }
 
-.box_infor {
-    width: 1020px;
+.infor_box_infor {
+    width: 980px;
     box-sizing: border-box;
     margin-left: 1.6875rem;
     min-width: 0;
@@ -24,20 +24,19 @@
     border-radius: 0.125rem;
 }
 
-.box_inforx {
+.infor_box_inforx {
     padding: 0 30px 10px;
     position: relative;
     min-height: 100%;
-    position: relative;
-    min-height: 100%;
+   
 }
 
-.top-box {
-    border-bottom: 0.0625rem solid #efefef;
+.infor_top-box {
+    border-bottom: 0.0625rem solid #efefef !important;
     padding: 1.175rem 0;
 }
 
-.top-box>h1 {
+.infor_top-box>h1 {
     margin: 0;
     font-size: 1.125rem;
     font-weight: 500;
@@ -46,37 +45,40 @@
     color: #333;
 }
 
-.borderbox {
+.infor_borderbox {
     margin-top: 0.1875rem;
-    font-size: .875rem;
+    font-size: 0.875rem;
     line-height: 1.0625rem;
     color: #333;
     text-transform: none;
 }
 
-.mainbox {
+.infor_mainbox {
     padding-top: 1.875rem;
     display: flex;
     justify-content: flex-end;
 }
 
-.leftboxinfor {
+.infor_leftboxinfor {
     flex: 1;
     padding-right: 3.15rem;
     width: 60%;
 }
 
-.box {
+.infor_box {
     align-items: center;
     margin-bottom: 0.875rem;
 }
 
-.inp {
+.infor_inp {
     display: flex;
     justify-content: center;
+    padding-bottom: 12px;
 }
 
-.label {
+
+.inp .label {
+
     display: flex;
     width: 40%;
     text-align: right;
@@ -85,52 +87,55 @@
     overflow: hidden;
 }
 
-label {
+
+.label label {
+
     text-align: right;
     width: 100%;
     padding-right: 20px;
+    font-weight: 400;
 }
 
-.inpuif {
+.infor_inpuif {
     width: 70%;
     display: flex;
 }
 
-.inpuif>input {
+.infor_inpuif>input {
     border: 0;
     padding-left: 5px;
     border-bottom: 1px #e8eeeb solid;
 }
 
-.txtdisable {}
+.infor_txtdisable {}
 
-.input>span {
+.infor_input>span {
     display: block;
 }
 
-.btn {
+.infor_btn {
     margin-left: 10px;
     padding: 0 5px;
 }
 
-.btn>button {
+.infor_btn>button {
     margin-top: 5px;
     color: blue;
     border: none;
     background: none;
-    border-bottom: 1px solid rgba(0, 0, 0, .14);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
 }
 
-.btn>button:hover {
+.infor_btn>button:hover {
     color: red;
 }
 
-.btnsave {
+.infor_btnsave {
     width: 60%;
     text-align: left;
 }
 
-.btnsave>button {
+.infor_btnsave>button {
     text-align: left;
     background-color: #01a14b;
     border: 1px #555 solid;
@@ -139,11 +144,11 @@ label {
     color: #ffff;
 }
 
-.btnsave>button:hover {
+.infor_btnsave>button:hover {
     background-color: #f32712
 }
 
-.imgbox2 {
+.infor_imgbox2 {
     width: 40%;
     background-color: transparent;
     border-left: 1px #eeefff solid;
@@ -153,9 +158,9 @@ label {
     justify-content: center;
 }
 
-.avatarbox {}
+.infor_avatarbox {}
 
-.frame-avatar2 {
+.infor_frame-avatar2 {
     width: 5.25rem;
     height: 5.25rem;
     display: inline-block;
@@ -164,8 +169,8 @@ label {
     color: rgba(0, 0, 0, .09);
 }
 
-.avatar-img2 {
-    color: rgba(0, 0, 0, .09);
+.infor_avatar-img2 {
+    color: rgba(0, 0, 0, 0.9);
     border-radius: 50%;
     width: 100%;
     position: relative;
@@ -173,7 +178,7 @@ label {
     padding-top: 100%;
 }
 
-.avatar-img2>i {
+.infor_avatar-img2>i {
     position: absolute;
     font-size: 2em;
     font-weight: 560;
@@ -184,23 +189,24 @@ label {
     line-height: 2rem;
 }
 
-.imgPurchase2>img {
+.infor_imgPurchase2>img {
     width: 100%;
     height: 100%;
 }
 
-.btn2>button {
+.infor_btn2>button {
     padding: 8px;
     background: none;
     border: 1px #efefef solid;
     border-radius: 0.1rem;
 }
 
-.btn2 input {
-    width: 82px;
+.infor_btn2 input {
+    width: 22%;
+    display: inline-block;
 }
 
-.fileimg span {
+.infor_fileimg span {
     display: block;
     color: #868585;
     text-align: center;

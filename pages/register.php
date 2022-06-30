@@ -191,7 +191,7 @@ if (isset($_POST['submit_btn'])) {
                             <span><?php echo $phoneErr; ?></span>
                         </div>
                     </div>
-                    <div class="register_ submit_btn">
+                    <div class="register_submit_btn">
                         <button name="submit_btn">Đăng ký</button>
                     </div>
 

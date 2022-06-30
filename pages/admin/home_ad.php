@@ -9,13 +9,15 @@
 </head>
 <body>
         <div class="header">
+            <img src="../../img/icon/logo.jpg" alt="" style="float:left; margin:50px 50px 50px">
             <h1 style="height: 100px;">NHÀ SÁCH TRÍ TUỆ</h1>
         </div> 
         <div class="main_menu">
         <ul>
-            <li><a href="" style="color: black;font-weight:bold;font-size:20px;"> Danh mục quản lí</a></li>
+
+            <li><a href="" style="background-color:rgb(1 161 75);font-weight:bold;font-size:20px;color:white"> Danh mục quản lí</a></li>
+            <li><a href="../admin/category_management_ad.php" >Quản lí danh mục</a></li>          
             <li><a href="../admin/homepage.php">Trang Chủ</a></li>
-            <li><a href="../admin/category_management_ad.php">Quản lí danh mục</a></li>
             <li><a href="../admin/product_management_ad.php">Quản lí sản phẩm</a></li>
             <li><a href="../admin/author_management_ad.php">Quản lí tác giả</a></li>
             <li><a href="../admin/supplier_management_ad.php">Quản lí nhà cung cấp</a></li>
@@ -25,5 +27,7 @@
             <li><a href="">Quản lí bài viết</a></li>
         </ul>
         </div>
+
+
 </body>
 </html>

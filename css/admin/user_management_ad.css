@@ -20,6 +20,7 @@ table{
     border-spacing: 0;
     font-size:14px ;
     font-family: 'Open Sans', sans-serif;
+    margin-bottom: 15px;
     
 }
 table tr{
@@ -27,7 +28,7 @@ table tr{
     background-color:white;
 }
 table td{
-    padding: 5px;
+    padding: 25px;
 
 }
 .title td{
@@ -47,4 +48,12 @@ button{
     background-color:rgb(1 161 75) ;
     padding: 7px;
     cursor: pointer;
+}
+.user_management_content #input_search{
+    width: 300px;
+    height: 30px;
+    margin-right: 20px;
+}
+.label_search{
+    margin-right: 30px;
 }
