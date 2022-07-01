@@ -16,13 +16,25 @@ include '../database/connect.php';
 // }
 if (isset($_SESSION['user'])) {
     $username = $_SESSION['user'];
-
+    
     $result = mysqli_fetch_array(mysqli_query($conn, "SELECT user_id FROM tbl_user WHERE user_name='$username'"));
     $user_id = $result['user_id'];
 
     $result2 = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM tbl_cart WHERE user_id='$user_id'"));
 
     $cart_id = $result2['cart_id'];
+    if(isset($_GET["id"])){
+        $id=$_GET["id"];
+        $sql_pdt= "SELECT * FROM tbl_cart INNER JOIN tbl_cart_detail ON tbl_cart.cart_id=tbl_cart_detail.cart_id WHERE tbl_cart_detail.cart_id='$cart_id' AND product_id=$id;"; 
+        $old_pdt= mysqli_query($conn,$sql_pdt);
+        if(mysqli_fetch_row($old_pdt)>0 ){
+
+            mysqli_query($conn,"UPDATE tbl_cart_detail SET tbl_cart_detail.product_amount=product_amount+1 WHERE product_id=$id AND tbl_cart_detail.cart_id=$cart_id");
+        }
+        else{        
+            mysqli_query($conn,"INSERT INTO tbl_cart_detail(cart_id,product_id,product_amount) VALUES ('$cart_id',$id,1)");
+        }   
+    }
 
     $pdt = "SELECT * FROM tbl_cart INNER JOIN tbl_cart_detail ON tbl_cart.cart_id=tbl_cart_detail.cart_id
         INNER JOIN tbl_product ON tbl_product.product_id=tbl_cart_detail.product_id
@@ -32,9 +44,7 @@ if (isset($_SESSION['user'])) {
     while ($row = mysqli_fetch_array($q)) {
         $cart[] = $row;
     }
-} else {
-    $cart = [];
-}
+} 
 mysqli_set_charset($conn, 'utf8');
 ?>
 <?php

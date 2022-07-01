@@ -44,17 +44,16 @@
     //Xét in đậm cho khoảng cột
     $excel->getActiveSheet()->getStyle('A3:E3')->getFont()->setBold(true);
     //Tạo tiêu đề cho từng cột
-    -
 
-    $excel->getActiveSheet()->setCellValue('A3','Mã Sản Phẩm');
-    $excel->getActiveSheet()->setCellValue('B3','Tên Sản Phẩm');
+    $excel->getActiveSheet()->setCellValue('A3', 'Mã Sản Phẩm');
+    $excel->getActiveSheet()->setCellValue('B3', 'Tên Sản Phẩm');
     $excel->getActiveSheet()->setCellValue('C3','Giá Bán');
     $excel->getActiveSheet()->setCellValue('D3','Số Lượng');
     $excel->getActiveSheet()->setCellValue('E3','Doanh Thu');
 
     // thực hiện thêm dữ liệu vào từng ô bằng vòng lặp
     // dòng bắt đầu = 2
-    $numRow = 4;
+     $numRow = 4;
 
     for($i=0;$i<count($product);$i++)
         {
@@ -73,4 +72,5 @@
     header('Content-type: application/vnd.ms-excel');
     header("Content-Disposition: attachment; filename=$filename"); 
     PHPExcel_IOFactory::createWriter($excel, 'Excel2007')->save('php://output');
+
     exit;

@@ -62,7 +62,7 @@
                                         </svg>                         
                                     </i>
                                 </a>
-                                <a class="btn-add-to-cart" href="./cart.php?id='.$product_list[$i]['product_id'].'" title="Thêm vào giỏ">
+                                <a class="btn-add-to-cart" onclick="noticeSoldProduct('.$product_list[$i]['product_quantity'].', '.$product_list[$i]['product_id'].', 1)" title="Thêm vào giỏ">
                                     <i class="icon_list">
                                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         width="446.843px" height="446.843px" viewBox="0 0 446.843 446.843" style="enable-background:new 0 0 446.843 446.843;"
@@ -108,8 +108,13 @@
         {
             console.log(productQuantity);
             if(productQuantity <= 0) alert("San pham da het hang!!!");
-            else {
-                var url = "product_add.php?id=" + productID + "&choose=" + choose;
+            else if(<?php if(!isset($_SESSION['user'])) echo 'true'; else echo 'false';?>) {
+                window.location.href = 'log_in.php';}
+            else if(choose == 1){
+                var url = "cart.php?id=" + productID;
+                window.location.href = url;
+            } else {
+                var url = "order.php?id=" + productID;
                 window.location.href = url;
             }
         }        
