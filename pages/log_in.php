@@ -1,10 +1,10 @@
 <?php
 include('./header.php');
 $iName = $iPass = $loginErr = "";
-    $nameErr = $passErr = $passmd5="";
+$nameErr = $passErr = $passmd5 = "";
 //Lưu ý: empty và isset sẽ trả về TRUE nếu biến không tồn tại 
 if (isset($_POST['submit_btn'])) {
-    
+
     $iName = $_POST['ipnName'];
     $iPass = $_POST['ipnPass'];
     $patternName = '/^\\w*$/';
@@ -33,106 +33,105 @@ if (isset($_POST['submit_btn'])) {
     } else {
         if (!preg_match($patternPass, $iPass))
             $passErr = "Mật khẩu không đúng";
-            else
-            $passmd5=md5($iPass);
+        else
+            $passmd5 = md5($iPass);
     }
     //Kết nối đến csdl
     include '../database/connect.php';
     //câu lệnh sql
-    
+
     $sql = "select *from tbl_user where user_name='$iName' and user_password='$passmd5' ";
     $query = mysqli_query($conn, $sql);
     $num_rows = mysqli_num_rows($query);
-    while($row=mysqli_fetch_assoc($query)){
-        $list[]=$row;
-
+    while ($row = mysqli_fetch_assoc($query)) {
+        $list[] = $row;
     }
     if ($num_rows == 0) {
         $loginErr = "Tên đăng nhập hoặc mật khẩu không đúng";
     } else {
         //Lưu tên đăng nhập và mật khẩu vào session để tiện xử lý sau này
-       $_SESSION['user']=$iName;
+        $_SESSION['user'] = $iName;
 
-           //thực thi hành động sua khi lưu thông tin
+        //thực thi hành động sua khi lưu thông tin
         //=> chuyển hướng trang web tới một tragn index.php
         // if($_GET['action']=='cart'){
         //     echo "<script>window.location.href='./cart_view.php'</script>";
         // }
         // else
-       foreach($list as $item):
-        if($item['user_type']==2)
-       echo "<script>window.location.href='./home.php'</script>";
-      else
-       echo "<script>window.location.href='../pages/admin/home_ad.php'</script>";
-       endforeach;
+        foreach ($list as $item) :
+            if ($item['user_type'] == 2)
+                echo "<script>window.location.href='./home.php'</script>";
+            else
+                echo "<script>window.location.href='../pages/admin/home_ad.php'</script>";
+        endforeach;
     }
 }
 
 
 ?>
 
-    <div class="login_container">
-        <div class="login_wapper">
-            <div class="login_tittle">
-                <h2>Đăng nhập<h2>
-            </div>
-            <form method="post" action="">
-                <div class="login_group userip">
-                    <div class="login_loginf">
-                        <div class="login_icon">
-                            <i class="login_fa-regular fa fa-user"></i>
-                        </div>
-                        <div id="login_user">
-                            <input type="text" value="" name="ipnName" placeholder="Tên đăng nhập" autofocus>
-                        </div>
-                    </div>
-
-                    <div class="login_messerror"> <span><?php echo $nameErr; ?></span></div>
-                </div>
-                <div class="login_group passwordip">
-                    <div class="login_loginf">
-                        <div class="login_icon">
-                            <i class="login_fa-solid fa fa-lock"></i>
-                        </div>
-                        <div id="login_pass">
-                            <input type="password" id="login_ipnPassword" placeholder="Mật khẩu" name="ipnPass">
-                        </div>
-                        <div id="login_showpass">
-                            <button id="login_btnPassword" type="button">
-                                <i class="login_fa-regular fa fa-eye" id="login_btnEye"></i>
-
-                            </button>
-
-                        </div>
-                    </div>
-                    <div class="login_messerror">
-                        <span>
-                            <?php if($passErr=="")
-                            echo ("$loginErr");
-                            else
-                            echo("$passErr");
-
-                         ?></span>
-                    </div>
-                </div>
-                <div class="login_submit_btn">
-                    <button name="submit_btn">Đăng nhập</button>
-                </div>
-                <div class="login_sp1">
-                <div>
-                <span ><a>Quên mật khẩu</a></span>
-
-                </div>
-                <div>
-
-                <span >Bạn đã có tài khoản chưa? Đăng ký <a href="register.php">Tại đây</a></span>
-                </div>
-                </div>
-
-                </from>
+<div class="login_container">
+    <div class="login_wapper">
+        <div class="login_tittle">
+            <h2>Đăng nhập<h2>
         </div>
-    </div>
+        <form method="post" action="">
+            <div class="login_group userip">
+                <div class="login_loginf">
+                    <div class="login_icon">
+                        <i class="login_fa-regular fa fa-user"></i>
+                    </div>
+                    <div id="login_user">
+                        <input type="text" value="" name="ipnName" placeholder="Tên đăng nhập" autofocus>
+                    </div>
+                </div>
 
-    <script src="../js/log_in.js"></script>
+                <div class="login_messerror"> <span><?php echo $nameErr; ?></span></div>
+            </div>
+            <div class="login_group passwordip">
+                <div class="login_loginf">
+                    <div class="login_icon">
+                        <i class="login_fa-solid fa fa-lock"></i>
+                    </div>
+                    <div id="login_pass">
+                        <input type="password" id="login_ipnPassword" placeholder="Mật khẩu" name="ipnPass">
+                    </div>
+                    <div id="login_showpass">
+                        <button id="login_btnPassword" type="button">
+                            <i class="login_fa-regular fa fa-eye" id="login_btnEye"></i>
+
+                        </button>
+
+                    </div>
+                </div>
+                <div class="login_messerror">
+                    <span>
+                        <?php if ($passErr == "")
+                            echo ("$loginErr");
+                        else
+                            echo ("$passErr");
+
+                        ?></span>
+                </div>
+            </div>
+            <div class="login_submit_btn">
+                <button name="submit_btn">Đăng nhập</button>
+            </div>
+            <div class="login_sp1">
+                <div>
+                    <span><a>Quên mật khẩu</a></span>
+
+                </div>
+                <div>
+
+                    <span>Bạn đã có tài khoản chưa? Đăng ký <a href="register.php">Tại đây</a></span>
+                </div>
+            </div>
+
+            </from>
+    </div>
+</div>
+
+<script src="../js/log_in.js"></script>
 
 <?php include('./footer.php');
