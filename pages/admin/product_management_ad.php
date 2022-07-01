@@ -116,7 +116,7 @@ include '../../database/connect.php'
                                     <td colspan=7>
                                         <form method="POST">
                                             <label for="" class="label_search">Tìm kiếm</label>
-                                            <input placeholder="Nhập tên sản phẩm" id="input_search" type="" name="search_txt1" value="<?php if (isset($_POST['action'])) echo $text_search1 ?>">
+                                            <input placeholder="Nhập tên sản phẩm" class="input_search1" type="" name="search_txt1" value="<?php if (isset($_POST['action'])) echo $text_search1 ?>">
                                             <button type="submit" value="search1" name="action">Tìm kiếm</button>
                                         </form>
                                     </td>
@@ -152,9 +152,7 @@ include '../../database/connect.php'
                             </table>
                             <!-- Danh sach san pham -->
                             <table>
-                                <tr>
-                                    <td colspan="7"><button type="submit" name="add">Thêm sản phẩm</button></td>
-                                </tr>
+
                                 <tr class="title_order">
                                     <td>Mã sản phẩm</td>
                                     <td>Tên sản phẩm</td>

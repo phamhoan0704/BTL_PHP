@@ -115,7 +115,7 @@ include '../../database/connect.php'
                                     <td colspan=7>
                                         <form method="POST">
                                             <label for="" class="label_search">Tìm kiếm</label>
-                                            <input placeholder="Nhập tên danh mục" id="input_search" type="" name="search_txt1" value="<?php if (isset($_POST['action'])) echo $text_search1 ?>">
+                                            <input placeholder="Nhập tên danh mục" class="input_search1" type="" name="search_txt1" value="<?php if (isset($_POST['action'])) echo $text_search1 ?>">
                                             <button type="submit" value="search1" name="action">Tìm kiếm</button>
                                         </form>
                                     </td>
@@ -136,6 +136,7 @@ include '../../database/connect.php'
                                             <td><?php echo $value['category_id'] ?></td>
                                             <td><?php echo $value['category_name']  ?></td>
                                             <td><?php echo $value['slco']  ?></td>
+                                            <td colspan="2"></td>
                                         </tr>
                                     <?php endforeach ?>
                                 <?php } else if (isset($_POST['action']) && $text_search1 != "" && $category_search == []) { ?>
@@ -146,9 +147,7 @@ include '../../database/connect.php'
                             </table>
                             <!-- Tất cả danh mục -->
                             <table>
-                                <tr>
-                                    <td colspan="7"><button type="submit" name="add">Thêm danh mục</button></td>
-                                </tr>
+
                                 <tr class="title_order">
                                     <td>Mã danh mục</td>
                                     <td>Tên danh mục</td>
@@ -174,9 +173,7 @@ include '../../database/connect.php'
                         </div>
                         <div class="home-tab-pane">
                             <table>
-                                <tr>
-                                    <td colspan="7"><button type="submit" name="add">Thêm danh mục</button></td>
-                                </tr>
+
                                 <tr class="title_order">
                                     <td>Mã danh mục</td>
                                     <td>Tên danh mục</td>

@@ -41,7 +41,8 @@ if (isset($_POST['action'])) {
     $action = $_POST['action'];
     if ($action == "search1") {
         $text_search1 = $_POST['search_txt1'];
-        $sql_author_search = "tbl_author.author_id, author_name,count(product_id) as sotp FROM `tbl_author`
+        $sql_author_search = "SELECT tbl_author.author_id, author_name,count(product_id) as sotp FROM tbl_author
+        INNER join tbl_product on tbl_product.author_id = tbl_author.author_id 
          where author_name LIKE '%$text_search1%' 
          GROUP by tbl_author.author_id;";
         $query_author_search = mysqli_query($conn, $sql_author_search);
@@ -49,13 +50,21 @@ if (isset($_POST['action'])) {
         while ($row = mysqli_fetch_array($query_author_search)) {
             $author_search[] = $row;
         }
+
     }
 }
 
 if (isset($_POST['author_delete'])) {
-    $category_id = $_POST['author_id'];
+    $author_id = $_POST['author_id'];
     // mysqli_query($conn,"DELETE FROM tbl_product WHERE category_id=$category_id");
-    mysqli_query($conn, "DELETE FROM tbl_author WHERE author_id=$author_id");
+    mysqli_query($conn, "UPDATE tbl_author SET author_status=1 WHERE author_id=$author_id");
+    header('location:author_management_ad.php');
+}
+
+if (isset($_POST['author_restore'])) {
+    $author_id = $_POST['author_id'];
+    // mysqli_query($conn,"DELETE FROM tbl_product WHERE category_id=$category_id");
+    mysqli_query($conn, "UPDATE tbl_author SET author_status=0 WHERE author_id=$author_id");
     header('location:author_management_ad.php');
 }
 ?>
@@ -112,7 +121,7 @@ if (isset($_POST['author_delete'])) {
                                 <td colspan=7>
                                     <form method="POST">
                                         <label for="" class="label_search">Tìm kiếm</label>
-                                        <input placeholder="Nhập tên tác giả" id="input_search" type="" name="search_txt1" value="<?php if (isset($_POST['action'])) echo $text_search1 ?>">
+                                        <input placeholder="Nhập tên tác giả" class="input_search1" type="" name="search_txt1" value="<?php if (isset($_POST['action'])) echo $text_search1 ?>">
                                         <button type="submit" value="search1" name="action">Tìm kiếm</button>
                                     </form>
                                 </td>
@@ -132,6 +141,7 @@ if (isset($_POST['author_delete'])) {
                                         <td><?php echo $value['author_id'] ?></td>
                                         <td><?php echo $value['author_name']  ?></td>
                                         <td> <?php echo  $value['sotp'] ?> </td>
+                                        <td colspan="2"></td>
                                     </tr>
                                 <?php endforeach ?>
                             <?php } else if (isset($_POST['action']) && $text_search1 != "" && $author_search == []) { ?>
@@ -154,6 +164,7 @@ if (isset($_POST['author_delete'])) {
                                     <td><?php echo $value['author_id'] ?></td>
                                     <td><?php echo $value['author_name']  ?></td>
                                     <td> <?php echo  $value['sotp'] ?> </td>
+                                    
                                     <td>
                                         <form method="POST">
                                             <input type="hidden" name="author_id" value="<?php echo $value['author_id'] ?>">
@@ -165,10 +176,9 @@ if (isset($_POST['author_delete'])) {
                         </table>
 
                 </div>
+                <div class="home-tab-pane">
                         <table>
-                            <tr>
-                                <td colspan="7"><button type="submit" name="add">Thêm tác giả</button></td>
-                            </tr>
+
                             <tr class="title_order">
                                 <td>Mã tác giả</td>
                                 <td>Tên tác giả</td>
@@ -193,9 +203,7 @@ if (isset($_POST['author_delete'])) {
                 </div>
                 <div class="home-tab-pane">
                         <table>
-                            <tr>
-                                <td colspan="7"><button type="submit" name="add">Thêm tác giả</button></td>
-                            </tr>
+
                             <tr class="title_order">
                                 <td>Mã tác giả</td>
                                 <td>Tên tác giả</td>
@@ -210,7 +218,7 @@ if (isset($_POST['author_delete'])) {
                                     <td>
                                         <form method="POST">
                                             <input type="hidden" name="author_id" value="<?php echo $value['author_id'] ?>">
-                                            <button type="submit" name="author_delete">Xóa</button>
+                                            <button type="submit" name="author_restore">Khôi phục</button>
                                         </form>
                                     </td>
                                 </tr>

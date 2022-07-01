@@ -23,6 +23,7 @@ table {
     border-spacing: 0;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
+    margin-bottom: 15px;
 }
 
 table tr {
@@ -59,4 +60,13 @@ button {
 table img {
     height: 50px;
     width: 50px;
+}
+.order_management_content .input_search1 {
+    width: 300px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.label_search {
+    margin-right: 30px;
 }
