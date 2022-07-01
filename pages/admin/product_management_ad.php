@@ -16,13 +16,28 @@ include '../../database/connect.php'
 
 <body>
     <?php
-    $sql_product = "SELECT *FROM tbl_product where product_status=0";
+    //Tất cả đơn hàng
+    $sql_product = "SELECT *FROM tbl_product ";
     $query_product = mysqli_query($conn, $sql_product);
-    //$li_order=mysqli_fetch_array($query_order);
     $product = [];
     while ($row = mysqli_fetch_array($query_product)) {
         $product[] = $row;
     }
+    //Sản phẩm đang hoạt động
+    $sql_product1 = "SELECT *FROM tbl_product where product_status=0";
+    $query_product1 = mysqli_query($conn, $sql_product1);
+    $product1 = [];
+    while ($row = mysqli_fetch_array($query_product1)) {
+        $product1[] = $row;
+    }
+    //Sản phẩm đã hết hàng
+    $sql_product_emtity = "SELECT *FROM tbl_product where product_quantity=0";
+    $query_product_emtity = mysqli_query($conn, $sql_product_emtity);
+    $product_emtity = [];
+    while ($row_emtity = mysqli_fetch_array($query_product_emtity)) {
+        $product_emtity[] = $row_emtity;
+    }
+    //Sản phẩm đã ẩn
     $sql_product2 = "SELECT *FROM tbl_product where product_status=1";
     $query_product2 = mysqli_query($conn, $sql_product2);
     //$li_order=mysqli_fetch_array($query_order);
@@ -30,8 +45,23 @@ include '../../database/connect.php'
     while ($row2 = mysqli_fetch_array($query_product2)) {
         $product2[] = $row2;
     }
+    
     // var_dump($order[0]['order_id']);
     // die();
+    //tim kiem san pham
+    if (isset($_POST['action'])) {
+        $action = $_POST['action'];
+        if ($action == "search1") {
+            $text_search1 = $_POST['search_txt1'];
+            $sql_product_search = "SELECT * FROM tbl_product where product_name LIKE '%$text_search1%' ";
+            $query_product_search = mysqli_query($conn, $sql_product_search);
+            $product_search = [];
+            while ($row = mysqli_fetch_array($query_product_search)) {
+                $product_search[] = $row;
+            }
+        }
+    }
+
     if (isset($_POST['product_delete'])) {
         $product_id = $_POST['product_id'];
         mysqli_query($conn, "Update tbl_product set product_status=1 WHERE product_id=$product_id");
@@ -45,17 +75,82 @@ include '../../database/connect.php'
             <form method="POST" action="product_add_ad.php">
                 <div class="home-tabs">
                     <div class="home-tab-title">
+                    <div class="home-tab-item active">
+                            <span>Tất cả</span>
+                            <span><?php echo count($product);?></span>
+
+                        </div>
                         <div class="home-tab-item active">
                             <span>Đang hoạt động</span>
+                            <span><?php echo count($product1);?></span>
+
                         </div>
                         <div class="home-tab-item">
+                            <span>Đã hết hàng</span>
+                            <span><?php echo count($product_emtity);?></span>
+
+                        </div>
+                         <div class="home-tab-item active">
                             <span>Đã ẩn</span>
+                            <span><?php echo count($product2);?></span>
+
                         </div>
                         <div class="line">
                         </div>
                     </div>
+                    <!-- thêm sản phẩm -->
+                    <table>
+                        <tr>
+                            <td colspan="7">
+                                <form method="POST" action="product_add_ad.php">
+                                    <button type="submit" name="add">Thêm sản phẩm</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
                     <div class="home-tab-content">
                         <div class="home-tab-pane active">
+                            <!-- Tìm kiếm sản phẩm -->
+                            <table>
+                                <tr>
+                                    <td colspan=7>
+                                        <form method="POST">
+                                            <label for="" class="label_search">Tìm kiếm</label>
+                                            <input placeholder="Nhập tên sản phẩm" id="input_search" type="" name="search_txt1" value="<?php if (isset($_POST['action'])) echo $text_search1 ?>">
+                                            <button type="submit" value="search1" name="action">Tìm kiếm</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <?php if (isset($_POST['action']) && $_POST['action'] = "search1" && $text_search1 != "" && $product_search != []) { ?>
+                                    <tr>
+                                        <td colspan="7"> Kết quả tìm kiếm :<span style="color: red; font-size: 18px"> <?php echo count($product_search) ?> </span></td>
+                                    </tr>
+                                    <tr class="title_order">
+                                        <td>Mã sản phẩm</td>
+                                        <td>Tên sản phẩm</td>
+                                        <td>Hình ảnh</td>
+                                        <td>Số lượng</td>
+                                        <td>Danh mục</td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <?php foreach ($product_search as $value) : ?>
+                                        <tr>
+
+                                            <td><?php echo $value['product_id'] ?></td>
+                                            <td style="width:300px;"><?php echo $value['product_name']  ?></td>
+                                            <td><img src="../../img/product/<?php echo $value['product_image'] ?>" alt=""> </td>
+                                            <td><?php echo $value['product_quantity'] ?></td>
+                                            <td><?php echo $value['category_id'] ?></td>
+                                            <td><a href="product_detail_ad.php?id=<?php echo $value["product_id"] ?>">Xem chi tiết</a> </td>
+                                        </tr>
+                                    <?php endforeach ?>
+                                <?php } else if (isset($_POST['action']) && $text_search1 != "" && $product_search == []) { ?>
+                                    <tr>
+                                        <td colspan="7"><?php echo "Không có kết quả phù hợp"  ?></td>
+                                    </tr>
+                                <?php } ?>
+                            </table>
+                            <!-- Danh sach san pham -->
                             <table>
                                 <tr>
                                     <td colspan="7"><button type="submit" name="add">Thêm sản phẩm</button></td>
@@ -90,7 +185,54 @@ include '../../database/connect.php'
                         </div>
                         <div class="home-tab-pane">
                             <table>
+                                <tr class="title_order">
+                                    <td>Mã sản phẩm</td>
+                                    <td>Tên sản phẩm</td>
+                                    <td>Hình ảnh</td>
+                                    <td>Số lượng</td>
+                                    <td>Danh mục</td>
+                                    <td colspan="2"></td>
+                                </tr>
+                                <?php foreach ($product1 as $value) : ?>
+                                    <tr>
+                                        <td><?php echo $value['product_id'] ?></td>
+                                        <td style="width:300px;"><?php echo $value['product_name']  ?></td>
+                                        <td><img src="../../img/product/<?php echo $value['product_image'] ?>" alt=""> </td>
+                                        <td><?php echo $value['product_quantity'] ?></td>
+                                        <td><?php echo $value['category_id'] ?></td>
+                                        <td><a href="product_detail_ad.php?id=<?php echo $value["product_id"] ?>">Xem chi tiết</a> </td>
 
+                                    </tr>
+                                <?php endforeach ?>
+
+                            </table>
+                        </div>
+                         <div class="home-tab-pane">
+                            <table>
+                                <tr class="title_order">
+                                    <td>Mã sản phẩm</td>
+                                    <td>Tên sản phẩm</td>
+                                    <td>Hình ảnh</td>
+                                    <td>Số lượng</td>
+                                    <td>Danh mục</td>
+                                    <td colspan="2"></td>
+                                </tr>
+                                <?php foreach ($product_emtity as $value) : ?>
+                                    <tr>
+                                        <td><?php echo $value['product_id'] ?></td>
+                                        <td style="width:300px;"><?php echo $value['product_name']  ?></td>
+                                        <td><img src="../../img/product/<?php echo $value['product_image'] ?>" alt=""> </td>
+                                        <td><?php echo $value['product_quantity'] ?></td>
+                                        <td><?php echo $value['category_id'] ?></td>
+                                        <td><a href="product_detail_ad.php?id=<?php echo $value["product_id"] ?>">Xem chi tiết</a> </td>
+
+                                    </tr>
+                                <?php endforeach ?>
+
+                            </table>
+                        </div>
+                        <div class="home-tab-pane">
+                            <table>
                                 <tr class="title_order">
                                     <td>Mã sản phẩm</td>
                                     <td>Tên sản phẩm</td>
@@ -124,5 +266,6 @@ include '../../database/connect.php'
         document.getElementById("header-product").style.color = "white";
     </script>
 </body>
- <script src="../../js/home_tab.js "></script>
+<script src="../../js/home_tab.js "></script>
+
 </html>

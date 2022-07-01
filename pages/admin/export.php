@@ -44,8 +44,7 @@
     //Xét in đậm cho khoảng cột
     $excel->getActiveSheet()->getStyle('A3:E3')->getFont()->setBold(true);
     //Tạo tiêu đề cho từng cột
-    -
-
+   
     $excel->getActiveSheet()->setCellValue('A3','Mã Sản Phẩm');
     $excel->getActiveSheet()->setCellValue('B3','Tên Sản Phẩm');
     $excel->getActiveSheet()->setCellValue('C3','Giá Bán');
