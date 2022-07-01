@@ -215,9 +215,17 @@ if (isset($_POST['author_delete'])) {
             </div>
         </div>
     </div>
+<<<<<<< HEAD
     </div>
+=======
+    <?php include 'footer_ad.php'; ?>
+    
+>>>>>>> 92fd45e36c170f9ead3b4786d85365548dc3ea9a
     <script src="../../js/home_tab.js "></script>
-
+    <script>
+        document.getElementById("header-author").style.background = "rgb(1 161 75)";
+        document.getElementById("header-author").style.color = "white";
+    </script>
 </body>
 
 </html>

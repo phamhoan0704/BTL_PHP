@@ -181,6 +181,7 @@
      </div>
 </div> 
 
+<?php include 'footer_ad.php'; ?>
 
 
 </body>

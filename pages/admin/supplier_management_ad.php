@@ -37,6 +37,7 @@ include '../../Database/connect.php'
             $supplier_active[] = $row;
         }
 //an
+$supplier_hide = [];
         $sql_supplier_hide="SELECT *FROM tbl_supplier WHERE supplier_status=1";
         $query_supplier_hide=mysqli_query($conn,$sql_supplier_hide);
        //$li_order=mysqli_fetch_array($query_order);
@@ -231,9 +232,15 @@ include '../../Database/connect.php'
         </div>
     </div>
     </div>
+    
+    <?php include 'footer_ad.php'; ?>
+
     <script src="../../js/home_tab.js "></script>
        
-
+    <script>
+        document.getElementById("header-supply").style.background = "rgb(1 161 75)";
+        document.getElementById("header-supply").style.color = "white";
+    </script>
 </body>
 
 </html>

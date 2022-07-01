@@ -62,7 +62,7 @@
                                         </svg>                         
                                     </i>
                                 </a>
-                                <a class="btn-add-to-cart" title="Thêm vào giỏ"  onclick="noticeSoldProduct('.$product_list[$i]['product_quantity'].', '.$product_list[$i]['product_id'].', 1)">
+                                <a class="btn-add-to-cart" href="./cart.php?id='.$product_list[$i]['product_id'].'" title="Thêm vào giỏ">
                                     <i class="icon_list">
                                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         width="446.843px" height="446.843px" viewBox="0 0 446.843 446.843" style="enable-background:new 0 0 446.843 446.843;"
