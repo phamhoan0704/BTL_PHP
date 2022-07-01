@@ -87,7 +87,7 @@
 <div class="order_detail_content">
      <?php include 'home_ad.php' ?>
 
-     <div class="order_detail_main">
+     <div class="order_detail_main" style="margin-bottom: 50px;">
      <form method="POST"  enctype="multipart/form-data">
        <table class="table_pdt">
                  <tr><td style="font-size: 16px;font-weight:bold">Thông tin sản phẩm</td> </tr>
@@ -157,7 +157,11 @@
 
      </div>
 </div> 
-
+<?php include 'footer_ad.php'; ?>
+    <script>
+        document.getElementById("header-product").style.background = "rgb(1 161 75)";
+        document.getElementById("header-product").style.color = "white";
+    </script>
 
 
 </body>
