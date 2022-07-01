@@ -115,8 +115,8 @@ include '../../database/connect.php'
                                 <tr>
                                     <td colspan=7>
                                         <form method="POST">
-                                            <label for="" class="label_search">Tìm kiếm</label>
-                                            <input placeholder="Nhập tên sản phẩm" class="input_search1" type="" name="search_txt1" value="<?php if (isset($_POST['action'])) echo $text_search1 ?>">
+                                            <label for="" class="label_search" style="margin-right: 30px;">Tìm kiếm</label>
+                                            <input placeholder="Nhập tên sản phẩm" class="input_search1" type="" name="search_txt1" value="<?php if (isset($_POST['action'])) echo $text_search1 ?>" style="width: 300px; height: 30px; margin-right: 20px;">
                                             <button type="submit" value="search1" name="action">Tìm kiếm</button>
                                         </form>
                                     </td>
