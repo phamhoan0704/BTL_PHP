@@ -139,7 +139,7 @@
         function drawChart() {
 
             var data = new google.visualization.DataTable();
-            data.addColumn('number', 'Day');
+            data.addColumn('number', 'Tháng');
             data.addColumn('number', 'Doanh Thu');
 
             data.addRows([

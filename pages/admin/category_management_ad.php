@@ -233,8 +233,8 @@ include '../../database/connect.php'
 
     <script src="../../js/home_tab.js"></script>
     <script>
-        document.getElementById("header-categoty").style.background = "rgb(1 161 75)";
-        document.getElementById("header-categoty").style.color = "white";
+        document.getElementById("header-category").style.background = "rgb(1 161 75)";
+        document.getElementById("header-category").style.color = "white";
     </script>
 </body>
 
